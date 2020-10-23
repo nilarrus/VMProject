@@ -1,0 +1,20 @@
+
+.game{
+  align-self:center;
+}
+.centrado{
+  display: flex;
+  justify-content: center;
+}
+.table-game{
+  border: 7px solid #770202;
+}
+.celda {
+  border: 3px solid yellowgreen;
+  background-color: wheat;
+  width: 70px;
+  height: 70px;
+}
+#gameTime,#gameFails,#level{
+  font-size: 2em;
+}
