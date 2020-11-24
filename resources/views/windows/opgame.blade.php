@@ -49,7 +49,12 @@
                             
                         </div>
                         <div class="col">
-                            <a class="btn btn-lg btn-primary" target="_blank" href="{{route('rank')}}" role="button">Ranking Global</a>
+                            <a class="btn btn-lg btn-primary" target="_blank" href="{{route('rank')}}" role="button">
+                                Ranking Global
+                                <img id="icon" src="{{URL::asset('img/newWindowIcon.png')}}" alt="">
+                            </a>
+                            
+                    </div>
                         </div>
                         <div class="col">
                             <form action="{{ route('store')}}" method="post">
@@ -58,6 +63,7 @@
                                 <input type="text" name="level" id="nStore" hidden value={{ intval($_POST["level"])+1}}>
                                 <input type="text" name="time" id="tStore" hidden value="0">
                                 <input type="text" name="fail" id="fStore" hidden value="0">
+                                <input type="text" name="menu" id="mStore" hidden value="menu">
                                 <button class="btn btn-lg btn-primary" type="submit">Guardar y Volver al menu</button>
                             </form>
                         </div>

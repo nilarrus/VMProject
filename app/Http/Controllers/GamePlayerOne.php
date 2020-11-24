@@ -14,14 +14,18 @@ class GamePlayerOne extends Controller
     }
 
     public function store(Request $request){
-        $user = User::where('username',$request->username)->first();
-        $rank = Ranking::where('user_gm',$user->email)->first();
+        if($request->menu == "menu"){
 
-        $rank->time = $request->time;
-        $rank->fails = $request->fail;
-        $rank->LastLevel = $request->level;
+            $user = User::where('username',$request->username)->first();
+            $rank = Ranking::where('user_gm',$user->email)->first();
 
-        $rank->save();
+            $rank->time = $request->time;
+            $rank->fails = $request->fail;
+            $rank->LastLevel = $request->level;
+
+            $rank->save();
+        }
+        
         
     
         return view('menu');
