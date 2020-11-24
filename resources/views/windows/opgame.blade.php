@@ -51,7 +51,7 @@
                         <div class="col">
                             <a class="btn btn-lg btn-primary" target="_blank" href="{{route('rank')}}" role="button">
                                 Ranking Global
-                                <img id="icon" src="{{URL::asset('img/newWindowIcon.png')}}" alt="">
+                                <img id="icon" src="{{URL::asset('img/newWindowIcon.png')}}" alt="" width="8%">
                             </a>
                             
                     </div>
