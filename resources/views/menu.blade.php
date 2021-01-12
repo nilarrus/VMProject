@@ -28,17 +28,23 @@
                                     </form>
                                 </div>
                             </div>
-                            <!--
+                            
                             <div class="row justify-content-md-center">
                                 <div class="col-md-auto mb-5">
                                     <p class="mb-2">El que gane mas rapido sobrevive <br>
                                          El que no cae<br>
                                          El ultimo se lleva la gloria
                                         </p>
-                                    <a class="btn btn-lg bg-success disabled" href="#" role="button" aria-disabled="true">Multijugador</a>
+                                        <form action="{{ route('multi')}}" method="post">
+                                            @csrf
+                                            <input type="text" name="level" id="" hidden value="1">
+                                            <input type="text" name="time" id="" hidden value="0">
+                                            <input type="text" name="fail" id="" hidden value="0">
+                                            <button class="btn btn-lg btn-primary" type="submit">Multijugador</button>
+                                        </form>
                                 </div>
                             </div>
-                            -->
+                            
                             <!--
                             <div class="row justify-content-md-center">
                                 <div class="col-md-auto mb-5">
