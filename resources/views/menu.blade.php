@@ -49,7 +49,7 @@
                             -->
                             <div class="row justify-content-md-center">
                                 <div class="col-md-auto mb-5">
-                                    <p class="mt-2 mb-2">© 2020-2020</p>
+                                    <p class="mt-2 mb-2">© 2020-2021</p>
                                 </div>
                             </div>
                         </div>
