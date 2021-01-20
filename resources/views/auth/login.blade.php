@@ -16,13 +16,10 @@
                            
                             <div class="col-md-6">
                                 <input id="username" type="username" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required  autofocus>
-                                
-                                @error('username')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                                @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>Test error</strong>
+                                </span>
+                                @error('email')          
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -35,12 +32,9 @@
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>Test error</strong>
+                                </span>
                             </div>
                         </div>
                         <!--  funciones por implementar

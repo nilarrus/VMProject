@@ -30,18 +30,7 @@ class LoginController extends Controller
     public function login(Request $request)
     {   
         $input = $request->all();
-
-        $credencials = $request-only('username','password');
-
-        $fieldType = filter_var($request->username, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
-
-        if(Auth::attempt(array($fieldType=>$input['username'],$credencials))){
-            $request-session()->regenerate();
-            return redirect()->intended('menu');
-        }
-        return redirect()->back()->withErrors([
-            'email' => 'Email-Address And/or Password Are Wrong.',]);
-        /*
+               
         $this->validate($request, [
             'username' => 'required',
             'password' => 'required',
@@ -56,7 +45,5 @@ class LoginController extends Controller
         return back()->withErrors([
             'email' => 'Email-Address And/or Password Are Wrong.',
             ]);
-    
-        */
     }
 }
