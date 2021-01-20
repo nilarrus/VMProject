@@ -16,7 +16,13 @@
                            
                             <div class="col-md-6">
                                 <input id="username" type="username" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required  autofocus>
-                           
+                                
+                                @if( $error = $errors->first('username'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $error }}</strong>
+                                    </span>
+                                @endif
+
                                 @error('username')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
