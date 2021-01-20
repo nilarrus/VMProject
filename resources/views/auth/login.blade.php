@@ -26,7 +26,9 @@
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                             </div>
                         </div>
-                        <div class="alert alert-danger">Error messege</div>
+                        @error('logError')
+                            <div class="alert alert-danger">Error messege</div>
+                        @enderror
                         <!--  funciones por implementar
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">

@@ -30,7 +30,7 @@ class LoginController extends Controller
     public function login(Request $request)
     {   
         $input = $request->all();
-               
+
         $this->validate($request, [
             'username' => 'required',
             'password' => 'required',
@@ -43,7 +43,7 @@ class LoginController extends Controller
             return redirect()->route('menu');
         }
         return back()->withErrors([
-            'email' => 'Email-Address And/or Password Are Wrong.',
+            'logError' => 'Email/Username And/or Password no estan registrado.',
             ]);
     }
 }
