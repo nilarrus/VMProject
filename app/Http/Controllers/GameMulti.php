@@ -14,6 +14,6 @@ class GameMulti extends Controller
     }
 
     public function launchGame(){
-        return view('widows.multi');
+        return view('windows.multi');
     }
 }
