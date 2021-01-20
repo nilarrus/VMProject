@@ -27,7 +27,7 @@
                             </div>
                         </div>
                         @error('logError')
-                            <div class="alert alert-danger">Error messege</div>
+                            <div class="alert alert-danger">{{$message}}</div>
                         @enderror
                         <!--  funciones por implementar
                         <div class="form-group row">
