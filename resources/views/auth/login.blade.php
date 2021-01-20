@@ -16,14 +16,6 @@
                            
                             <div class="col-md-6">
                                 <input id="username" type="username" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required  autofocus>
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>Test error</strong>
-                                </span>
-                                @error('email')          
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
                             </div>
                         </div>
 
@@ -32,11 +24,9 @@
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>Test error</strong>
-                                </span>
                             </div>
                         </div>
+                        <div class="alert alert-danger">Error messege</div>
                         <!--  funciones por implementar
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
