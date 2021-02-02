@@ -43,7 +43,7 @@ class LoginController extends Controller
             return redirect()->route('menu');
         }
         return back()->withErrors([
-            'logError' => 'Email/Username And/or Password no estan registrado.',
+            'logError' => 'Email/Username i/o el Password no estan registrados.',
             ]);
     }
 }
