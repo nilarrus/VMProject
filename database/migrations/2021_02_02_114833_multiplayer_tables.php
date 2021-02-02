@@ -34,7 +34,7 @@ class MultiplayerTables extends Migration
             $table->string('P6')->nullable();
             $table->timestamps();
 
-            $table-foreing('NSala')
+            $table-foreign('NSala')
             ->references('NSalas')
             ->on('salas')
             ->onDelete('cascade');
