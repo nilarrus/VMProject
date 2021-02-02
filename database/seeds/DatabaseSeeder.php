@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
             'time' => 0,
             'fails'=> 0,
             'Lastlevel'=> 1,
+            'MPoints' => 100,
         ]);
         $faker = Faker\Factory::create();
 
@@ -43,6 +44,7 @@ class DatabaseSeeder extends Seeder
                 'time' => mt_rand(1,50),
                 'fails'=> mt_rand(1,15),
                 'Lastlevel'=> mt_rand(1,3),
+                'MPoints'=> 100,
             ]);
             
         }

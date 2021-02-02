@@ -19,6 +19,7 @@ class Ranking extends Migration
             $table->integer('time');
             $table->integer('fails');
             $table->integer('Lastlevel');
+            $table->integer('MPoints');
             $table->timestamps();
 
             $table->foreign('user_gm')
