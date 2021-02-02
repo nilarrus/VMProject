@@ -47,7 +47,8 @@ class MultiplayerTables extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('salas');
         Schema::dropIfExists('sala');
+        Schema::dropIfExists('salas');
+        
     }
 }
