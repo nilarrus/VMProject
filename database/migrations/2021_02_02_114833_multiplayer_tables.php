@@ -32,7 +32,6 @@ class MultiplayerTables extends Migration
             $table->string('P4')->nullable();
             $table->string('P5')->nullable();
             $table->string('P6')->nullable();
-            $table->timestamps();
 
             $table->foreign('NSala')
             ->references('NSalas')
