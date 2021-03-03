@@ -35,7 +35,7 @@
                                          El que no cae<br>
                                          El ultimo se lleva la gloria
                                         </p>
-                                        <form action="{{ route('multi')}}" method="post">
+                                        <form action="{{ route('multiMenu')}}" method="post">
                                             @csrf
                                             <input type="text" name="level" id="" hidden value="1">
                                             <input type="text" name="time" id="" hidden value="0">
