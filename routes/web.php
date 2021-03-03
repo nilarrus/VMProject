@@ -15,7 +15,7 @@ Route::get('/menu', 'HomeController@index')->name('menu');
 Route::post('/gp1', 'GamePlayerOne@launchGame')->name('gp1');
 
 //Joc Multijugador
-Route::post('/mpl', 'GameMulti@launchGame')->name('multi');
+Route::post('/mpl', 'GameMulti@launchGame')->name('multiMenu');
 
 //Guardar al ranking 
 Route::post('/store', 'GamePlayerOne@store')->name('store');
