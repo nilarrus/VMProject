@@ -15,20 +15,20 @@
                             <div class="row justify-content-md-center">
                                 <div class="col-md-auto md-5">
                                     <p class="mb-2">Crear Sala 
-                                        <button class="btn btn-lg btn-primary">+</button>
+                                        <button class="btn btn-lg btn-primary">Nueva sala</button>
                                     </p>
                                 </div>
                             </div>
                             <div class="row justify-content-md-center">
                                 <div class="col-md-auto mb-5">
                                     <p class="mb-2">Unirse a sala
-                                        <button class="btn btn-lg btn-primary">-</button>
+                                        <button class="btn btn-lg btn-primary">Entrar</button>
                                     </p>
                                 </div>
                             </div>
                             <div class="row justify-content-md-rigth">
                                 <div class="col-md-auto mb-5">
-                                    <button class="mt mb-2">Back</button>
+                                    <button class="mt mb-2 btn-primary">Atras</button>
                                 </div>
                             </div>
                         </div>
