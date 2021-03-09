@@ -28,7 +28,7 @@
                             </div>
                             <div class="row justify-content-md-rigth">
                                 <div class="col-md-auto mb-5">
-                                    <p class="mt mb-2">Back</p>
+                                    <button class="mt mb-2">Back</button>
                                 </div>
                             </div>
                         </div>
