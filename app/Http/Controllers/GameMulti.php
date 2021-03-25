@@ -12,8 +12,15 @@ class GameMulti extends Controller
     {
         $this->middleware('auth');
     }
-
+    //menu
     public function launchSelectRoom(){
         return view('windows.multiMenu');
     }
+    //crearLlista
+
+    //llista
+    public function launchSelectListRoom(){
+        return view('windows.multiRoomList');
+    }
+
 }
