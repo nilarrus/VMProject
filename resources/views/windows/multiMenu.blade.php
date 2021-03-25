@@ -28,7 +28,8 @@
                             </div>
                             <div class="row justify-content-md-rigth">
                                 <div class="col-md-auto mb-5">
-                                    <button class="mt mb-2 btn-primary">Atras</button>
+                                    <a class="button" href="{{ route('menu') }}"> Atras </a>
+                                    
                                 </div>
                             </div>
                         </div>
