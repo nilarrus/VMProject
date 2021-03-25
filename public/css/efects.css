@@ -34,3 +34,6 @@
 .cajaFin{
     width: 17em;
 }
+.lista-salas{
+    visibility: hidden;
+}
