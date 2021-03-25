@@ -22,7 +22,7 @@
                             <div class="row justify-content-md-center">
                                 <div class="col-md-auto mb-5">
                                     <p class="mb-2">Unirse a sala
-                                        <button class="btn btn-lg btn-primary">Entrar</button>
+                                        <button class="btn btn-lg btn-primary">Lista</button>
                                     </p>
                                 </div>
                             </div>
