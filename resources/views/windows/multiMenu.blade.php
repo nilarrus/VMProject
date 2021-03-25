@@ -28,7 +28,7 @@
                             </div>
                             <div class="row justify-content-md-rigth">
                                 <div class="col-md-auto mb-5">
-                                    <a class="button" href="{{ route('menu') }}"> Atras </a>
+                                    <a class="btn btn-dark" role="button" href="{{ route('menu') }}"> Atras </a>
                                     
                                 </div>
                             </div>
