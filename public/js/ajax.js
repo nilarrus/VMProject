@@ -12,7 +12,9 @@ function f1(){
     {
         if(textStatus === 'timeout')
         {
-            alext('Failed from timeout');
+            alert('Failed from timeout');
+        }else{
+            alert(textStatus);
         }
     });
 }
