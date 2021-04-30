@@ -1,5 +1,7 @@
 function StartFunction() {
-    $("#tempMis1").text("Yo");
+    $("#tempMis1").html("Yo");
+
+    $("#tempMis2").html("testing");
 }
    
 

@@ -15,7 +15,7 @@
     <script src="{{ URL::asset('js/efects.js')}}"></script>
     <!-- Jquery -->
     <script src="{{ URL::asset('js/jquery-3.6.0.js')}}"></script>
-    <script src="{{ URL::asset('js/jquery-3.6.0..min.js')}}"></script>
+    <script src="{{ URL::asset('js/jquery-3.6.0.min.js')}}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
