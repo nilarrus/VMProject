@@ -1,4 +1,7 @@
+function StartFunction() {
     $("#tempMis1").text("Yo");
+}
+   
 
     /*$.ajax({
         url: "multi.blade.php",

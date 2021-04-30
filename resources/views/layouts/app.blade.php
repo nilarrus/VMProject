@@ -13,7 +13,9 @@
     <script src="{{ URL::asset('js/app.js') }}" defer></script>
     <script src="{{ URL::asset('js/general.js')}}"></script>
     <script src="{{ URL::asset('js/efects.js')}}"></script>
-    <script src="{{ URL::asset('js/jquery-3.3.1.js')}}"></script>
+    <!-- Jquery -->
+    <script src="{{ URL::asset('js/jquery-3.6.0.js')}}"></script>
+    <script src="{{ URL::asset('js/jquery-3.6.0..min.js')}}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">

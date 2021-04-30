@@ -4,7 +4,7 @@
 <!-- Ajax -->
 <script src="{{ URL::asset('js/ajax.js')}}"></script>
 
-<div class="container">
+<div class="container" onload="StartFunction()">
 
     <div id="header" class="mb-4">
         <div id="level" class="row mb-0 mt-0">           
