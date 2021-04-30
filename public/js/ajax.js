@@ -1,12 +1,14 @@
 document.onload = function(){f1()};
 
-function f1(){
-    $.ajax({
+function f1(){ 
+    $("#tempMis1").text("Yo");
+
+    /*$.ajax({
         url: "multi.blade.php",
         timeout : 3000
     }).done(function()
     {
-        $("#tempMis1").text("Yo");
+       
 
     }).fail(function(jqXHR, textStatus)
     {
@@ -16,5 +18,5 @@ function f1(){
         }else{
             alert(textStatus);
         }
-    });
+    });*/
 }
