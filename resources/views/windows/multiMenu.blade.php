@@ -15,7 +15,7 @@
                             <div class="row justify-content-md-center">
                                 <div class="col-md-auto md-5">
                                     <p class="mb-2">Crear Sala 
-                                        <button class="btn btn-lg btn-primary">Nueva sala</button>
+                                        <a class="btn btn-lg btn-primary" role="button" href="{{ route('multisala')}}">Nueva sala</a>
                                     </p>
                                 </div>
                             </div>

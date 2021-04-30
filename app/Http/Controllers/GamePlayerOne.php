@@ -26,8 +26,6 @@ class GamePlayerOne extends Controller
             $rank->save();
         }
         
-        
-    
         return view('menu');
     }
 
