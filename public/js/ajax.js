@@ -1,6 +1,3 @@
-document.onload = function(){f1()};
-
-function f1(){ 
     $("#tempMis1").text("Yo");
 
     /*$.ajax({
@@ -19,4 +16,4 @@ function f1(){
             alert(textStatus);
         }
     });*/
-}
+
