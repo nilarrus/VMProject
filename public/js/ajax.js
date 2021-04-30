@@ -2,7 +2,7 @@ document.onload = function(){f1()};
 
 function f1(){
     $.ajax({
-        url: "multt.blade.php",
+        url: "multi.blade.php",
         timeout : 3000
     }).done(function()
     {
