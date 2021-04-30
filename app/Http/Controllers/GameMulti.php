@@ -18,7 +18,7 @@ class GameMulti extends Controller
     }
     //Sala de joc
     public function launchRoom(){
-        return view('widows.multi');
+        return view('windows.multi');
     }
 
     //llista
