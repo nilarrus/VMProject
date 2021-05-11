@@ -20,7 +20,7 @@
                                     </p>
                                     <form action="{{ route('multisala')}}" method="post" id="formSpas" style="display: none">
                                         @csrf
-                                        <label for="nsala">Numero de la sala:</label><br/>
+                                        <label for="nsala">Nombre de la sala:</label><br/>
                                         <input type="text" name="nsala" id="nsala" value="Pepinos"><br/>
                                         <label for="spas">Password Sala:</label><br/>
                                         <input type="text" name="spas" id="spas" ><br/>
