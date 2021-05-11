@@ -3,16 +3,6 @@
 @section('content')
     
 <!-- JavaScript -->
-<script>
-    $(#formSpas).hide();
-    function formSalaPassword() {
-        $(#formSpas).show();
-        var random = Math.random()* (9999 - 1)+1;
-        $("input[name=nsala]").val(random);
-        
-
-      }
-</script>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
