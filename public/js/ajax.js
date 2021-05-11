@@ -5,8 +5,8 @@ function StartFunction() {
 }
    
 
-    /*$.ajax({
-        url: "multi.blade.php",
+    $.ajax({
+        url: "/multi",
         timeout : 3000
     }).done(function()
     {
@@ -20,5 +20,5 @@ function StartFunction() {
         }else{
             alert(textStatus);
         }
-    });*/
+    });
 
