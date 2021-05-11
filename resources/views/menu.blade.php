@@ -35,7 +35,7 @@
                                          El que no cae<br>
                                          El ultimo se lleva la gloria
                                         </p>
-                                        <form action="{{ route('multiMenu') }}" method="get">
+                                        <form action="{{ route('multiMenu') }}" method="post">
                                             @csrf
                                             <button class="btn btn-lg btn-primary" type="submit">Multijugador</button>
                                         </form>

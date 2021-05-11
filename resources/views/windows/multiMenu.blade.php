@@ -3,7 +3,11 @@
 @section('content')
     
 <!-- JavaScript -->
-
+<script>
+    function formSalaPassword() {
+        $(#formSpas).show();
+      }
+</script>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
@@ -15,8 +19,14 @@
                             <div class="row justify-content-md-center">
                                 <div class="col-md-auto md-5">
                                     <p class="mb-2">Crear Sala 
+                                        <button onclick="formSalaPassword()"> </button>
                                         <a class="btn btn-lg btn-primary" role="button" href="{{ route('multisala')}}">Nueva sala</a>
                                     </p>
+                                    <form action="{{ route('multisala')}}" method="post" id="formSpas" >
+                                        @csrf
+                                        <input type="password" name="spas" id="spas">
+                                        <button class="btn btn-lg btn-primary" type="submit">Jugar</button>
+                                    </form>
                                 </div>
                             </div>
                             <div class="row justify-content-md-center">
