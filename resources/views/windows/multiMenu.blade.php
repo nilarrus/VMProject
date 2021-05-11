@@ -3,6 +3,8 @@
 @section('content')
     
 <!-- JavaScript -->
+<script>
+</script>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
@@ -14,11 +16,11 @@
                             <div class="row justify-content-md-center">
                                 <div class="col-md-auto md-5">
                                     <p class="mb-2">Crear Sala 
-                                        <button type="button" class="btn btn-lg btn-primary" onclick="formSalaPassword()"> Nueva sala </button>
+                                        <button id="show" type="button" class="btn btn-lg btn-primary" > Nueva sala </button>
                                     </p>
-                                    <form action="{{ route('multisala')}}" method="post" id="formSpas" >
+                                    <form action="{{ route('multisala')}}" method="post" id="formSpas" style="display: none">
                                         @csrf
-                                        <input type="text" name="spas" id="spas">
+                                        <input type="text" name="spas" id="spas" >
                                         <input type="text" name="nsala" id="nsala" disabled value="0">
                                         <button class="btn btn-lg btn-primary" type="submit">Jugar</button>
                                     </form>
