@@ -19,8 +19,8 @@
                             <div class="row justify-content-md-center">
                                 <div class="col-md-auto md-5">
                                     <p class="mb-2">Crear Sala 
-                                        <button onclick="formSalaPassword()"> </button>
-                                        <a class="btn btn-lg btn-primary" role="button" href="{{ route('multisala')}}">Nueva sala</a>
+                                        <button class="btn btn-lg btn-primary" onclick="formSalaPassword()"> </button>
+                                        <!--<a class="btn btn-lg btn-primary" role="button" href="{{ route('multisala')}}">Nueva sala</a>-->
                                     </p>
                                     <form action="{{ route('multisala')}}" method="post" id="formSpas" >
                                         @csrf
