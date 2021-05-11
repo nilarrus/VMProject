@@ -16,7 +16,7 @@ class MultiplayerTables extends Migration
         //Main Rooms
         Schema::create('salas', function (Blueprint $table) {
             $table->id();
-            $table->integer('NSala')->unique();
+            $table->string('NSala')->unique();
             $table->string('SPassword');
             $table->timestamps();
             

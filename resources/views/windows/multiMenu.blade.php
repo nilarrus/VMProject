@@ -21,14 +21,14 @@
                                     <form action="{{ route('multisala')}}" method="post" id="formSpas" style="display: none">
                                         @csrf
                                         <label for="nsala">Numero de la sala:</label><br/>
-                                        <input type="text" name="nsala" id="nsala" disabled value="0"><br/>
+                                        <input type="text" name="nsala" id="nsala" value="Pepinos"><br/>
                                         <label for="spas">Password Sala:</label><br/>
                                         <input type="text" name="spas" id="spas" ><br/>
                                         <button class="btn btn-lg btn-primary" type="submit">Jugar</button>
                                     </form>
                                 </div>
                             </div>
-                            <div class="row justify-content-md-center">
+                            <div class="row justify-content-md-center lista">
                                 <div class="col-md-auto mb-5">
                                     <p class="mb-2">Unirse a sala
                                         <a class="btn btn-lg btn-primary" role="button" href="{{ route('multiRoomList')}}">Lista</a>   

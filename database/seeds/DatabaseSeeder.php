@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'ng@gmail.com',
             'username' => 'nilarrus',
             'password' => Hash::make('12345678'),
-            'sala' => 0,
+            'sala' => 'Matrix',
         ]);
         App\Ranking::create([
             'user_gm' => 'ng@gmail.com',
@@ -40,7 +40,7 @@ class DatabaseSeeder extends Seeder
                 'name' => $faker->name,
                 'email' => $emailF,
                 'password' => Hash::make('12345678'),
-                'sala' =>0,
+                'sala' =>'Matrix',
             ]);
             
 
