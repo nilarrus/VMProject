@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'ng@gmail.com',
             'username' => 'nilarrus',
             'password' => Hash::make('12345678'),
+            'sala' => 0,
         ]);
         App\Ranking::create([
             'user_gm' => 'ng@gmail.com',
@@ -36,6 +37,7 @@ class DatabaseSeeder extends Seeder
                 'name' => $faker->name,
                 'email' => $emailF,
                 'password' => Hash::make('12345678'),
+                'sala' =>$i+1,
             ]);
             
 
@@ -44,10 +46,10 @@ class DatabaseSeeder extends Seeder
                 'time' => mt_rand(1,50),
                 'fails'=> mt_rand(1,15),
                 'Lastlevel'=> mt_rand(1,3),
-                'MPoints'=> 100,
             ]);
             
         }
+
 
 
 
