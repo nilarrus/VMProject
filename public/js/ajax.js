@@ -6,7 +6,7 @@ function StartFunction() {
    
 
     $.ajax({
-        url: "/multi",
+        url: "/mplsl",
         timeout : 3000
     }).done(function()
     {
