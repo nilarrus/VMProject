@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         App\Sala::create([
-            'NSala'=>0,
+            'NSala'=>'Matrix',
             'SPassword'=> Hash::make('1234'),
         ]);
         App\User::create([

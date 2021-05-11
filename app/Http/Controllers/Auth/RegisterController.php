@@ -66,7 +66,6 @@ class RegisterController extends Controller
             'time' => 0,
             'fails'=> 0,
             'Lastlevel'=> 0,
-            'MPoints'=>100,
         ]);
         return $user;
     }
