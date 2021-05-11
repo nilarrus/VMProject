@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Salas extends Model
+class Sala extends Model
 {
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['NSalas','NPlayers','Status'];
+    protected $fillable = ['NSala','SPassword'];
 
     /**
      * The attributes that should be hidden for arrays.

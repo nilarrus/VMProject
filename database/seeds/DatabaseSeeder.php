@@ -14,6 +14,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        App\Sala::create([
+            'NSala'=>0,
+            'SPassword'=> Hash::make('1234'),
+        ]);
         App\User::create([
             'name' => 'nil',
             'email' => 'ng@gmail.com',
@@ -26,7 +30,6 @@ class DatabaseSeeder extends Seeder
             'time' => 0,
             'fails'=> 0,
             'Lastlevel'=> 1,
-            'MPoints' => 100,
         ]);
         $faker = Faker\Factory::create();
 
@@ -37,7 +40,7 @@ class DatabaseSeeder extends Seeder
                 'name' => $faker->name,
                 'email' => $emailF,
                 'password' => Hash::make('12345678'),
-                'sala' =>$i+1,
+                'sala' =>0,
             ]);
             
 
