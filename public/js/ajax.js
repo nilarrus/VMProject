@@ -9,7 +9,7 @@ $.ajax({
 }).done(function()
 {
     
-
+    alert("donete");
 }).fail(function(jqXHR, textStatus)
 {
     if(textStatus === 'timeout')
