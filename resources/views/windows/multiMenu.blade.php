@@ -16,7 +16,7 @@
                             <div class="row justify-content-md-center">
                                 <div class="col-md-auto md-5">
                                     <p class="mb-2">Crear Sala 
-                                        <button id="show" type="button" class="btn btn-lg btn-primary" > Nueva sala </button>
+                                        <button id="show" type="button" class="btn btn-lg btn-primary" onclick="showForm()" > Nueva sala </button>
                                     </p>
                                     <form action="{{ route('multisala')}}" method="post" id="formSpas" style="display: none">
                                         @csrf
