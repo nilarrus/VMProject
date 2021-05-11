@@ -4,8 +4,13 @@
     
 <!-- JavaScript -->
 <script>
+    $(#formSpas).hide();
     function formSalaPassword() {
         $(#formSpas).show();
+        var random = Math.random()* (9999 - 1)+1;
+        $("input[name=nsala]").val(random);
+        
+
       }
 </script>
 <div class="container">
@@ -19,12 +24,12 @@
                             <div class="row justify-content-md-center">
                                 <div class="col-md-auto md-5">
                                     <p class="mb-2">Crear Sala 
-                                        <button class="btn btn-lg btn-primary" onclick="formSalaPassword()"> </button>
-                                        <!--<a class="btn btn-lg btn-primary" role="button" href="{{ route('multisala')}}">Nueva sala</a>-->
+                                        <button type="button" class="btn btn-lg btn-primary" onclick="formSalaPassword()"> Nueva sala </button>
                                     </p>
                                     <form action="{{ route('multisala')}}" method="post" id="formSpas" >
                                         @csrf
-                                        <input type="password" name="spas" id="spas">
+                                        <input type="text" name="spas" id="spas">
+                                        <input type="text" name="nsala" id="nsala" disabled value="0">
                                         <button class="btn btn-lg btn-primary" type="submit">Jugar</button>
                                     </form>
                                 </div>
