@@ -14,23 +14,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        App\Sala::create([
-            'NSala'=>'Matrix',
-            'SPassword'=> Hash::make('1234'),
-        ]);
         App\User::create([
             'name' => 'nil',
             'email' => 'ng@gmail.com',
             'username' => 'nilarrus',
             'password' => Hash::make('12345678'),
-            'sala' => 'Matrix',
         ]);
+        
         App\Ranking::create([
             'user_gm' => 'ng@gmail.com',
             'time' => 0,
             'fails'=> 0,
             'Lastlevel'=> 1,
         ]);
+
         $faker = Faker\Factory::create();
 
         for($i = 0; $i < 100; $i++) {
@@ -40,7 +37,6 @@ class DatabaseSeeder extends Seeder
                 'name' => $faker->name,
                 'email' => $emailF,
                 'password' => Hash::make('12345678'),
-                'sala' =>'Matrix',
             ]);
             
 

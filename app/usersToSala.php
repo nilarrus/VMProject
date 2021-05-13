@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class sala extends Model
+class usersToSala extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -12,7 +12,6 @@ class sala extends Model
      * @var array
      */
     protected $fillable = [
-        'NSala', 'SPassword',
+        'UsEmail', 'NSala',
     ];
-
 }
