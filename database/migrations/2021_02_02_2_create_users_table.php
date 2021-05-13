@@ -20,14 +20,8 @@ class CreateUsersTable extends Migration
             $table->string('username')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('sala');
             $table->rememberToken();
-            $table->timestamps();
-
-            $table->foreign('sala')
-            ->references('NSala')
-            ->on('salas')
-            ->onDelete('cascade');
+            $table->timestamps();         
         });
     }
 
