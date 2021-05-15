@@ -16,15 +16,16 @@ class Sala extends Migration
         Schema::create('usersToSalas', function (Blueprint $table) {
             $table->id();
             $table->string('UsEmail')->unique();
-            $table->integer('NSala');
+            $table->String('NSala')->unique();
             $table->timestamps();
 
             $table->foreign('UsEmail')
             ->references('email')
             ->on('users')
             ->onDelete('cascade');
+
             $table->foreign('NSala')
-            ->references('NSalas')
+            ->references('NSala')
             ->on('salas')
             ->onDelete('cascade');
         });
