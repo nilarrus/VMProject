@@ -18,6 +18,7 @@ class MultiplayerTables extends Migration
             $table->id();
             $table->string('NSala')->unique();
             $table->string('SPassword');
+            $table->json('Celes')->nullable();
             $table->timestamps();
             
         });

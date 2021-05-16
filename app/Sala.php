@@ -12,7 +12,7 @@ class sala extends Model
      * @var array
      */
     protected $fillable = [
-        'NSala', 'SPassword',
+        'NSala', 'SPassword','Celes',
     ];
 
 }
