@@ -21,22 +21,22 @@ class NewRoom extends Controller
         $sala->SPassword = $request->spas;
         
         $sala->save();
-        var_dump($request->user);
+        
         //Generar relacion entre la sala creada i el usuario que la ha creado
-        /*
+        
         $ustsal = new UsersToSala;
         $ustsal->NSala = $request->nsala;
         $ustsal->UsEmail = EmailUser($request->user);// falta consulata a la bbdd para en correo con el usuario.
-
-        $ustsal->save();
-        */
+        var_dump($ustsal);
+        //$ustsal->save();
+        
 
         return view('windows.multi');
     }
 
     private function EmailUser($user)
     {
-        
+        $email = $user;
         return $email;
     }
 
