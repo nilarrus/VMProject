@@ -14,7 +14,7 @@ class NewRoom extends Controller
         $this->middleware('auth');
     }
     
-    private function EmailUser($user)
+    public function EmailUser($user)
     {
         //SQL where user = email;
         $email = $user;
