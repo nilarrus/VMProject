@@ -10,23 +10,11 @@ class GameListRoom extends Controller
 {
     //llista
     public function launchSelectListRoom(){
-        /*
-        $salas = UserToSala::select('')
+        /*SELECT ,  FROM user_to_salas INNER JOIN users ON user_to_salas.UsEmail=users.email;*/
+        $salas = UserToSala::join('users','users.email','=','user_to_salas.UsEmail')
+        ->select('user_to_salas.NSala','users.username')
+        ->paginate(10);
         
-        
-        
-        DB::table('rankings')
-        ->join('users','users.email','=','rankings.user_gm')
-        ->select('users.username','rankings.time','rankings.fails','rankings.Lastlevel')
-        ->orderBy('Lastlevel','desc')
-        ->orderby('fails','asc')
-        ->orderby('time','asc')
-        ->paginate(12);
-        return view('windows.ranking', ['salas' => $salas]);
-
-
-*/  
-
-        return view('windows.multiRoomList');
+        return view('windows.multiRoomList',['user_to_salas'=>$salas]);        
     }
 }

@@ -24,7 +24,7 @@
                                     </thead>
                                     <tbody>
                                        <?php 
-                                       //echo $salas;
+                                       echo $salas;
                                        /*@foreach($users as $user)
                                        <tr>
                                            <td>{{ $user->username }}</td>
