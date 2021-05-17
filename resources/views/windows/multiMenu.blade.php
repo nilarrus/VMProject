@@ -24,6 +24,7 @@
                                         <input type="text" name="nsala" id="nsala" value="Pepinos"><br/>
                                         <label for="spas">Password Sala:</label><br/>
                                         <input type="text" name="spas" id="spas" ><br/>
+                                        <input type="text" name="user" id="user" hidden value="{{ Auth::user()->username }}">
                                         <button class="btn btn-lg btn-primary" type="submit">Jugar</button><br/>
                                     </form>
                                 </div>
