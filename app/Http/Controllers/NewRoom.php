@@ -34,7 +34,7 @@ class NewRoom extends Controller
         
         $ustsal = new UserToSala;
         $ustsal->NSala = $request->nsala;
-        $ustsal->UsEmail = EmailUser($request->user);// falta consulata a la bbdd para en correo con el usuario.
+        $ustsal->UsEmail = $this->EmailUser($request->user);// falta consulata a la bbdd para en correo con el usuario.
         var_dump($ustsal);
         //$ustsal->save();
         
