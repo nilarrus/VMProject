@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Sala;
-use App\UsersToSala;
+use App\UserToSala;
 
 class NewRoom extends Controller
 {
@@ -24,7 +24,7 @@ class NewRoom extends Controller
         
         //Generar relacion entre la sala creada i el usuario que la ha creado
         
-        $ustsal = new UsersToSala;
+        $ustsal = new UserToSala;
         $ustsal->NSala = $request->nsala;
         $ustsal->UsEmail = EmailUser($request->user);// falta consulata a la bbdd para en correo con el usuario.
         var_dump($ustsal);
