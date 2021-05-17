@@ -8,6 +8,10 @@ use App\sala;
 
 class NewRoom extends Controller
 {
+    public function __costruct()
+    {
+        $this->middleware('auth');
+    }
     public function newRoom (Request $request)
     {
         $sala = new sala;
@@ -16,6 +20,8 @@ class NewRoom extends Controller
         //$sala->Celes = json_encode
 
         $sala->save();
+
+        return view('windows.multi');
     }
 
 }

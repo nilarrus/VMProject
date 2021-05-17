@@ -22,9 +22,4 @@ class GameMulti extends Controller
         return view('windows.multiRoomList');
     }
 
-    //Sala de joc
-    public function launchRoom(){
-        return view('windows.multi');
-    }
-
 }
