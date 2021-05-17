@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Sala;
 use App\UserToSala;
+use App\User;
 
 class NewRoom extends Controller
 {
@@ -17,8 +18,11 @@ class NewRoom extends Controller
     public function EmailUser($user)
     {
         //SQL where user = email;
-        $email = $user;
-        return $email;
+        $email = User::where("email",$user)->first();
+        
+        var_dump($email);
+        
+        return $user;
     }
 
     public function newRoom (Request $request)
@@ -35,7 +39,7 @@ class NewRoom extends Controller
         $ustsal = new UserToSala;
         $ustsal->NSala = $request->nsala;
         $ustsal->UsEmail = $this->EmailUser($request->user);// falta consulata a la bbdd para en correo con el usuario.
-        var_dump($ustsal);
+        
         //$ustsal->save();
         
 
