@@ -20,9 +20,9 @@ class NewRoom extends Controller
     {
         //SQL where user = email;
         $slqUser = User::where('username','=',$user)->get();
-        //$email = $slqUser->email;
+        $email = $slqUser->email;
         
-        var_dump($slqUser);
+        var_dump($email);
         
         return $user;
     }
