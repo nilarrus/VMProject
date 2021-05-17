@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserToSala extends Model
+class User_To_Sala extends Model
 {
     /**
      * The attributes that are mass assignable.
