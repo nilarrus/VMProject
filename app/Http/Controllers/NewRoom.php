@@ -34,7 +34,7 @@ class NewRoom extends Controller
         return view('windows.multi');
     }
 
-    private function EmailUser($user);
+    private function EmailUser($user)
     {
         
         return $email;
