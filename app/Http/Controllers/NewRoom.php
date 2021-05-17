@@ -21,7 +21,7 @@ class NewRoom extends Controller
         $sala->SPassword = $request->spas;
         
         $sala->save();
-
+        var_dump($request->user);
         //Generar relacion entre la sala creada i el usuario que la ha creado
         /*
         $ustsal = new UsersToSala;
