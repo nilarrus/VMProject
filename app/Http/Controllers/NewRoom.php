@@ -14,7 +14,8 @@ class NewRoom extends Controller
     }
     public function newRoom (Request $request)
     {
-        var_dump($request);
+        var_dump($request->nsala);
+        var_dump($request->spas);
         /*$sala = new Sala;
         $sala->NSala = $request->NSala;
         $sala->SPassword = $request->SPassword;
