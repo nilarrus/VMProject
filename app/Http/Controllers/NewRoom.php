@@ -46,8 +46,9 @@ class NewRoom extends Controller
     }
     public function DeleteTemp(Request $request)
     {
-       // DB::table('client_project')->where('client_id',$id)->delete();
-       var_dump($request);
+       var_dump($request->nsala);
+       var_dump($request->spas);
+       var_dump($request->user);
        return view('widows.menu');
     }
 
