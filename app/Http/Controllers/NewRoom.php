@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\sala;
+use App\Sala;
 
 class NewRoom extends Controller
 {
@@ -14,7 +14,7 @@ class NewRoom extends Controller
     }
     public function newRoom (Request $request)
     {
-        $sala = new sala;
+        $sala = new Sala;
         $sala->NSala = $request->NSala;
         $sala->SPassword = $request->SPassword;
         //$sala->Celes = json_encode
