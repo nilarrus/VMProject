@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Fascades\DB;
 use App\Sala;
 use App\UserToSala;
 use App\User;
+
 
 class NewRoom extends Controller
 {
@@ -18,7 +20,8 @@ class NewRoom extends Controller
     public function EmailUser($user)
     {
         //SQL where user = email;
-        $email = User::where("email",$user)->first();
+        $slqUser = DB::table('users')->where('username','=',$user)->get();
+        $email = $slqUser->email;
         
         var_dump($email);
         
