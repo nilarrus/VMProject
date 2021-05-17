@@ -22,9 +22,7 @@ class NewRoom extends Controller
         $slqUser = User::where('username','=',$user)->first();
         $email = $slqUser->email;
         
-        var_dump($email);
-        
-        return $user;
+        return $email;
     }
 
     public function newRoom (Request $request)
@@ -40,8 +38,8 @@ class NewRoom extends Controller
         
         $ustsal = new UserToSala;
         $ustsal->NSala = $request->nsala;
-        $ustsal->UsEmail = $this->EmailUser($request->user);// falta consulata a la bbdd para en correo con el usuario.
-        
+        $ustsal->UsEmail = $this->EmailUser($request->user);
+        var_dump($ustsal);
         //$ustsal->save();
         
 
