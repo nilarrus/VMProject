@@ -49,7 +49,7 @@ class NewRoom extends Controller
        var_dump($request->nsala);
        var_dump($request->spas);
        var_dump($request->user);
-       return view('widows.menu');
+       return view('windows.menu');
     }
 
     
