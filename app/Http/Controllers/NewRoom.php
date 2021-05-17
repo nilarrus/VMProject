@@ -13,6 +13,14 @@ class NewRoom extends Controller
     {
         $this->middleware('auth');
     }
+    
+    private function EmailUser($user)
+    {
+        //SQL where user = email;
+        $email = $user;
+        return $email;
+    }
+
     public function newRoom (Request $request)
     {
         // Generar sala
@@ -34,10 +42,6 @@ class NewRoom extends Controller
         return view('windows.multi');
     }
 
-    private function EmailUser($user)
-    {
-        $email = $user;
-        return $email;
-    }
+    
 
 }
