@@ -14,14 +14,13 @@ class NewRoom extends Controller
     }
     public function newRoom (Request $request)
     {
-        var_dump($request->nsala);
-        var_dump($request->spas);
-        /*$sala = new Sala;
-        $sala->NSala = $request->NSala;
-        $sala->SPassword = $request->SPassword;
+        
+        $sala = new Sala;
+        $sala->NSala = $request->nsala;
+        $sala->SPassword = $request->spas;
         //$sala->Celes = json_encode
 
-        $sala->save();*/
+        $sala->save();
 
         return view('windows.multi');
     }
