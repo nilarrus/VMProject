@@ -16,7 +16,8 @@ Route::post('/gp1', 'GamePlayerOne@launchGame')->name('gp1');
 
 //Joc Multijugador seleccionar sala
 Route::post('/mpl', 'GameMulti@launchSelectRoom')->name('multiMenu');
-Route::get('/mplrl', 'GameMulti@launchSelectListRoom')->name('multiRoomList');
+
+Route::get('/mplrl', 'GameListRoom@launchSelectListRoom')->name('multiRoomList');
 
 //Llençar la sala multiplayer
 Route::post('/mplsl', 'NewRoom@newRoom')->name('multisala');

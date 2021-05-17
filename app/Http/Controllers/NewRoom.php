@@ -48,7 +48,7 @@ class NewRoom extends Controller
     {
         Sala::where('NSala','=',$request->nsala)->delete();
         UserToSala::where('NSala','=',$request->nsala)->delete();
-        return view('windows.menu');
+        return view('menu');
     }
 
     

@@ -14,23 +14,17 @@
                         <div class="col-md-12 text-center">
                             <div class="row justify-content-md-center"> <!-- lista salas en espera -->
                                 <div class="header text-center">
-                                    <h2 class="titulo">Lista</h2>
                                 </div>
                                 <table class="table table-striped table-dark">
                                     <thead>
                                     <tr>
                                        <th scope="col">Numero de sala</th>
-                                       <th scope="col">Numero de juegadores en la sala</th>
-                                       <th scope="col">Status</th>
+                                       <th scope="col">Creador</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>test numero 1</td>
-                                            <td>test numero jugadores 3</td>         
-                                            <td>test Jugando</td>                
-                                        </tr>
                                        <?php 
+                                       //echo $salas;
                                        /*@foreach($users as $user)
                                        <tr>
                                            <td>{{ $user->username }}</td>
@@ -42,11 +36,13 @@
                                     </tbody>
                                  </table>
                                  <?php /*{{$users->links()}}*/ ?>
-                            </div>
-                            
+                            </div>                            
                             <div class="row justify-content-md-rigth">
                                 <div class="col-md-auto mb-5">
-                                    <a class="btn btn-dark" role="button" href="{{ route('multiMenu') }}"> Atras </a>
+                                    <form action="{{ route('multiMenu')}}" method="post" id="formReturn">
+                                        @csrf
+                                        <button class="btn btn-dark" type="submit">Return</button><br/>
+                                    </form>
                                 </div>
                             </div>
                         </div>

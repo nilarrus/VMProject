@@ -7,10 +7,6 @@
 <div class="container">
 
     <div id="header" class="mb-4">
-        <div id="level" class="row mb-0 mt-0">           
-            <div id="tempMis1" class="col text-right">Nivel1</div>
-            <div id="tempMis2" class="col text-right">Nivel2</div>
-        </div>
         <div id="info_user" class="row mb-0 mt-0">
             <div id="Email"> {{$_POST["user"]}} </div>
             <div id="NSala">{{$_POST["nsala"]}}</div>

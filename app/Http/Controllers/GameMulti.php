@@ -17,9 +17,6 @@ class GameMulti extends Controller
         return view('windows.multiMenu');
     }
     
-    //llista
-    public function launchSelectListRoom(){
-        return view('windows.multiRoomList');
-    }
+    
 
 }
