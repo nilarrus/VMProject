@@ -21,6 +21,9 @@ Route::get('/mplrl', 'GameMulti@launchSelectListRoom')->name('multiRoomList');
 //Llençar la sala multiplayer
 Route::post('/mplsl', 'NewRoom@newRoom')->name('multisala');
 
+//ruta temp 
+Route::post('/mpDelete', 'NewRoom@DeleteTemp')->name('deleteRoom');
+
 //Guardar al ranking 
 Route::post('/store', 'GamePlayerOne@store')->name('store');
 

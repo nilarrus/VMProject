@@ -39,11 +39,16 @@ class NewRoom extends Controller
         $ustsal = new UserToSala;
         $ustsal->NSala = $request->nsala;
         $ustsal->UsEmail = $this->EmailUser($request->user);
-        var_dump($ustsal);
-        //$ustsal->save();
         
-
+        $ustsal->save();
+        
         return view('windows.multi');
+    }
+    public function DeleteTemp(Request $request)
+    {
+       // DB::table('client_project')->where('client_id',$id)->delete();
+       var_dump($request);
+       return view('widows.menu');
     }
 
     

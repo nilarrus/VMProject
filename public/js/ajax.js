@@ -1,22 +1,6 @@
 function StartFunction() {
-    $("#tempMis1").html("Yo");
+    $("#tempMis1").html("Yo1");
 
-    $("#tempMis2").html("testing");
+    $("#tempMis2").html("testing2");
 }
-$.ajax({
-    url: "/mplsl",
-    timeout : 3000
-}).done(function()
-{
-    
-    alert("donete");
-}).fail(function(jqXHR, textStatus)
-{
-    if(textStatus === 'timeout')
-    {
-        alert('Failed from timeout');
-    }else{
-        alert(textStatus);
-    }
-});
 
