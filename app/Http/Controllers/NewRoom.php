@@ -19,7 +19,7 @@ class NewRoom extends Controller
     public function EmailUser($user)
     {
         //SQL where user = email;
-        $slqUser = Usser::where('username','=',$user)->get();
+        $slqUser = User::where('username','=',$user)->get();
         $email = $slqUser->email;
         
         var_dump($email);
