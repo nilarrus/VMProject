@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Sala;
-use App\User_To_Sala;
+use App\UserToSala;
 use App\User;
 
 
@@ -36,7 +36,7 @@ class NewRoom extends Controller
         
         //Generar relacion entre la sala creada i el usuario que la ha creado
         
-        $ustsal = new User_To_Sala;
+        $ustsal = new UserToSala;
         $ustsal->NSala = $request->nsala;
         $ustsal->UsEmail = $this->EmailUser($request->user);
         
