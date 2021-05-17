@@ -46,10 +46,9 @@ class NewRoom extends Controller
     }
     public function DeleteTemp(Request $request)
     {
-       var_dump($request->nsala);
-       var_dump($request->spas);
-       var_dump($request->user);
-       return view('windows.menu');
+        Sala::where('NSala','=',$request->nsala)->delete();
+        UserToSala::where('NSala','=',$request->nsala)->delete();
+        return view('windows.menu');
     }
 
     
