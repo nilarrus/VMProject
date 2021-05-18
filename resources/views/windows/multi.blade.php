@@ -21,5 +21,9 @@
         <div id="Password">{{$_POST["spas"]}}</div><br>
     </div>
 </div>
-<script> StartFunction() </script>
+<script> 
+    var test = {{$JsonCorrectes}};
+    console.log(test);
+    StartFunction() 
+</script>
 @endsection

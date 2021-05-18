@@ -61,8 +61,8 @@ class NewRoom extends Controller
         $ustsal->save();
         
         $JsonCorrectes = $this->generarCelesCorrectes(3);
-        printf($JsonCorrectes);
-        return view('windows.multi');
+        var_dump($JsonCorrectes);
+        return view('windows.multi',$JsonCorrectes);
     }
     public function DeleteTemp(Request $request)
     {
