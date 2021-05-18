@@ -28,7 +28,7 @@ class NewRoom extends Controller
         $r = $this->randInt($min);
 
         if(in_array($r,$Celes)){
-            return noRepetir($Celes,$min);
+            return $this->noRepetir($Celes,$min);
         }else{
             return $r;
         }
