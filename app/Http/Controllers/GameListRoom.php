@@ -10,8 +10,9 @@ class GameListRoom extends Controller
 {
     //llista
     public function launchSelectListRoom(){
-        /*SELECT ,  FROM user_to_salas INNER JOIN users ON user_to_salas.UsEmail=users.email;*/
-        $salas = UserToSala::join('users','users.email','=','user_to_salas.UsEmail')
+        /*SELECT user_to_salas.NSala,users.username  FROM user_to_salas INNER JOIN users ON user_to_salas.UsEmail=users.email;*/
+        $salas = DB::table('user_to_salas')
+        ->join('users','user_to_salas.UsEmail','=','users.email')
         ->select('user_to_salas.NSala','users.username')
         ->paginate(10);
         
