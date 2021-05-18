@@ -16,12 +16,23 @@ class NewRoom extends Controller
     {
         $this->middleware('auth');
     }
-    public function noRepetir($Celes,$x)
+
+
+    public function randInt($min)
     {
+        return random_int(0,$min-1);
+    }
+
+    public function noRepetir($Celes,$min)
+    {
+        $r = $this->randInt($min);
+
         if(in_array($x,$Celes)){
-            return false;
+            return noRepetir($Celes,$min);
+        }else{
+            return $r;
         }
-        return true;
+        
     }
 
     public function generarCelesCorrectes($minim)
@@ -30,10 +41,8 @@ class NewRoom extends Controller
         $Celes = array($minim);
 
         for ($i=0; $i < $minim-1; $i++) { 
-            $rand = random_int(0,$minim-1);
-            if($this->noRepetir($Celes,$rand)){
-                array_push($Celes,$rand);
-            }
+            
+            array_push($this->noRepetir($Celes,$minim),$Celes);
         }
        
         return json_encode($Celes);
