@@ -11,7 +11,7 @@ use App\User;
 
 class NewRoom extends Controller
 {
-    $Celes = [];
+    const $Celes = [];
     public function __costruct()
     {
         $this->middleware('auth');
