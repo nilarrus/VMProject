@@ -62,7 +62,7 @@ class NewRoom extends Controller
         
         $JsonCorrectes = $this->generarCelesCorrectes(3);
         var_dump($JsonCorrectes);
-        return view('windows.multi',$JsonCorrectes);
+        return view('windows.multi',['JsonCorrectes' => $JsonCorrectes]);
     }
     public function DeleteTemp(Request $request)
     {
