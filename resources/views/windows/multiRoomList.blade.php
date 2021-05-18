@@ -22,21 +22,16 @@
                                        <th scope="col">Creador</th>
                                     </tr>
                                     </thead>
-                                    <tbody>
-                                        {{$salas}}
-                                        <?php
-                                        /*                     
+                                    <tbody>                    
                                        @foreach($salas as $sala)
                                        <tr>
                                            <td>{{ $sala->NSala }}</td>
                                            <td>{{ $sala->Username }}</td>                        
                                        </tr>
                                        @endforeach
-                                       */
-                                       ?>
                                     </tbody>
                                  </table>
-                                 <?php /*{{$users->links()}}*/ ?>
+                                 {{$salas->links()}}
                             </div>                            
                             <div class="row justify-content-md-rigth">
                                 <div class="col-md-auto mb-5">
