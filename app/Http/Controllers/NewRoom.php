@@ -11,11 +11,31 @@ use App\User;
 
 class NewRoom extends Controller
 {
+    $Celes = array();
+
     public function __costruct()
     {
         $this->middleware('auth');
     }
-    
+
+    public function generarCelesCorrectes($minim)
+    {
+        $Celes = array($minim);
+
+        for ($i=0; $i < $minim-1; $i++) { 
+            array_push($Celes,random_int(0,$minim-1));
+        }
+        
+        return json_encode($Celes);
+
+    }
+
+
+    public function nextLevel($level)
+    {
+        
+    }
+
     public function EmailUser($user)
     {
         //SQL where user = email;
@@ -42,6 +62,8 @@ class NewRoom extends Controller
         
         $ustsal->save();
         
+        $JsonCorrectes = generarCelesCorrectes(3);
+        printf($JsonCorrectes);
         return view('windows.multi');
     }
     public function DeleteTemp(Request $request)

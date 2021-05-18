@@ -7,18 +7,19 @@
 <div class="container">
 
     <div id="header" class="mb-4">
-        <div id="info_user" class="row mb-0 mt-0">
-            <div id="Email"> {{$_POST["user"]}} </div>
-            <div id="NSala">{{$_POST["nsala"]}}</div>
-            <div id="Password">{{$_POST["spas"]}}</div>
-        </div>
-        <form action="{{ route('deleteRoom')}}" method="post" id="formReturn">
+        
+        
+        <form action="{{ route('deleteRoom')}}" method="post" id="formReturn" style="display: none">
             @csrf
             <input type="text" name="nsala" id="nsala" value="{{$_POST["nsala"]}}"><br/>
             <button class="btn btn-dark" type="submit">Return</button><br/>
         </form>
     </div>
-    
+    <div id="info_user" class="row mb-0 mt-0">
+        <div id="Email"> {{$_POST["user"]}} </div><br>
+        <div id="NSala">{{$_POST["nsala"]}}</div><br>
+        <div id="Password">{{$_POST["spas"]}}</div><br>
+    </div>
 </div>
 <script> StartFunction() </script>
 @endsection

@@ -102,8 +102,8 @@ function celesCorrectes(x,y) {
         var celda = generarNRandom(total);       
         celesCorr[index] = celdas.item(celda);
         celesN[index] = celda;
-        console.log(celesCorr[index]);
-        console.log(celesN[index]);
+        //console.log(celesCorr[index]);
+        //console.log(celesN[index]);
     } 
 }
 /**
