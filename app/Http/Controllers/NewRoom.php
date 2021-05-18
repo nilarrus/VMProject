@@ -18,7 +18,7 @@ class NewRoom extends Controller
     }
     public function noRepetir($Celes,$x)
     {
-        if(in_array($Celes,$x)){
+        if(in_array($x,$Celes)){
             return false;
         }
         return true;
