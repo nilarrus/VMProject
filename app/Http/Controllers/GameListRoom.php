@@ -14,7 +14,7 @@ class GameListRoom extends Controller
         $salas = UserToSala::join('users','users.email','=','user_to_salas.UsEmail')
         ->select('user_to_salas.NSala','users.username')
         ->paginate(10);
-        var_dump($salas);
+        
         return view('windows.multiRoomList',['user_to_salas'=>$salas]);        
     }
 }

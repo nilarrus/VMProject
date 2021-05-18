@@ -23,20 +23,19 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                       <?php 
-                                       echo {{$salas}};
-                                       /*@foreach($users as $user)
+                                                                
+                                       @foreach($salas as $sala)
                                        <tr>
-                                           <td>{{ $user->username }}</td>
-                                           <td>{{ $user->time }}</td>         
-                                           <td>{{ $user-> }}</td>                
+                                           <td>{{ $sala->NSala }}</td>
+                                           <td>{{ $sala->Username }}</td>                        
                                        </tr>
-                                       @endforeach */
-                                       ?>
+                                       @endforeach
+                                    
                                     </tbody>
                                  </table>
                                  <?php /*{{$users->links()}}*/ ?>
-                            </div>                            
+                            </div>  
+                            {{$salas}}                           
                             <div class="row justify-content-md-rigth">
                                 <div class="col-md-auto mb-5">
                                     <form action="{{ route('multiMenu')}}" method="post" id="formReturn">
