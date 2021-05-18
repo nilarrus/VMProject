@@ -23,7 +23,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                        {{$salas}}
+                                        {{$user_to_salas}}
                                         <?php    
                                         /*                     
                                        @foreach($salas as $sala)
