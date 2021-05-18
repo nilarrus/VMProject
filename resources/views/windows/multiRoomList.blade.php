@@ -37,8 +37,7 @@
                                     </tbody>
                                  </table>
                                  <?php /*{{$users->links()}}*/ ?>
-                            </div>  
-                            {{$salas}}                           
+                            </div>                            
                             <div class="row justify-content-md-rigth">
                                 <div class="col-md-auto mb-5">
                                     <form action="{{ route('multiMenu')}}" method="post" id="formReturn">
