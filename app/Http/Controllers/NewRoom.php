@@ -18,7 +18,7 @@ class NewRoom extends Controller
 
     public function generarCelesCorrectes($minim)
     {
-        $Celes = new array;
+        $Celes = array[];
         $Celes = array($minim);
 
         for ($i=0; $i < $minim-1; $i++) { 
