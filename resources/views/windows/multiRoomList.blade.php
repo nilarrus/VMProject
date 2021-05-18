@@ -23,14 +23,17 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                                                
+                                        {{$_POST}}
+                                        <?php    
+                                        /*                     
                                        @foreach($salas as $sala)
                                        <tr>
                                            <td>{{ $sala->NSala }}</td>
                                            <td>{{ $sala->Username }}</td>                        
                                        </tr>
                                        @endforeach
-                                    
+                                       */
+                                       ?>
                                     </tbody>
                                  </table>
                                  <?php /*{{$users->links()}}*/ ?>
