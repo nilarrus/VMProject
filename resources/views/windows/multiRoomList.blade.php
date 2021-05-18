@@ -25,7 +25,7 @@
                                     <tbody>
                                         {{$user_to_salas}}
                                         <?php 
-                                            echo $_POST;   
+                                            printf($_POST);   
                                         /*                     
                                        @foreach($salas as $sala)
                                        <tr>
