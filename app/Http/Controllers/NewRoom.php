@@ -11,12 +11,12 @@ use App\User;
 
 class NewRoom extends Controller
 {
-    const $Celes = [];
+    
     public function __costruct()
     {
         $this->middleware('auth');
     }
-    public function noRepetir($x)
+    public function noRepetir($Celes,$x)
     {
         if(in_array($Celes,$x)){
             return false;
@@ -31,7 +31,7 @@ class NewRoom extends Controller
 
         for ($i=0; $i < $minim-1; $i++) { 
             $rand = random_int(0,$minim-1);
-            if($this->noRepetir($rand)){
+            if($this->noRepetir($Celes,$rand)){
                 array_push($Celes,$rand);
             }
         }
