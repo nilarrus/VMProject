@@ -60,7 +60,7 @@ class NewRoom extends Controller
         
         $ustsal->save();
         
-        $JsonCorrectes = generarCelesCorrectes(3);
+        $JsonCorrectes = $this->generarCelesCorrectes(3);
         printf($JsonCorrectes);
         return view('windows.multi');
     }
