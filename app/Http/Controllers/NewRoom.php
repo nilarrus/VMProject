@@ -41,8 +41,8 @@ class NewRoom extends Controller
         $Celes = array($minim);
 
         for ($i=0; $i < $minim-1; $i++) { 
-            
-            array_push($this->noRepetir($Celes,$minim),$Celes);
+            $cela = $this->noRepetir($Celes,$minim);
+            array_push($celes,$Cela);
         }
        
         return json_encode($Celes);
