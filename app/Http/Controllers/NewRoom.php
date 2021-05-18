@@ -11,7 +11,7 @@ use App\User;
 
 class NewRoom extends Controller
 {
-    $Celes = array();
+    $Celes = new array();
 
     public function __costruct()
     {
