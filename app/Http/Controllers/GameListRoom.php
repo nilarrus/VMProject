@@ -15,6 +15,6 @@ class GameListRoom extends Controller
         ->select('user_to_salas.NSala','users.username')
         ->paginate(10);
         
-        return view('windows.multiRoomList',['user_to_salas'=>$salas]);        
+        return view('windows.multiRoomList',['user_to_salas' => $salas]);        
     }
 }
