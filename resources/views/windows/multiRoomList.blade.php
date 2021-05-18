@@ -23,7 +23,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                        {{$_POST}}
+                                        {{$salas}}
                                         <?php    
                                         /*                     
                                        @foreach($salas as $sala)
