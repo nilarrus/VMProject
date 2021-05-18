@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         App\User::create([
-            'name' => 'nil',
+            'name' => 'Nil',
             'email' => 'ng@gmail.com',
             'username' => 'nilarrus',
             'password' => Hash::make('12345678'),
@@ -27,10 +27,36 @@ class DatabaseSeeder extends Seeder
             'fails'=> 0,
             'Lastlevel'=> 1,
         ]);
+        App\User::create([
+            'name' => 'Leandro',
+            'email' => 'lz@gmail.com',
+            'username' => 'Lean',
+            'password' => Hash::make('12345678'),
+        ]);
+        
+        App\Ranking::create([
+            'user_gm' => 'lz@gmail.com',
+            'time' => 0,
+            'fails'=> 0,
+            'Lastlevel'=> 1,
+        ]);
+        App\User::create([
+            'name' => 'Enric',
+            'email' => 'em@gmail.com',
+            'username' => 'EnricM',
+            'password' => Hash::make('12345678'),
+        ]);
+        
+        App\Ranking::create([
+            'user_gm' => 'em@gmail.com',
+            'time' => 0,
+            'fails'=> 0,
+            'Lastlevel'=> 1,
+        ]);
 
         $faker = Faker\Factory::create();
 
-        for($i = 0; $i < 100; $i++) {
+        for($i = 0; $i < 90; $i++) {
             $emailF = $faker->email;
             App\User::create([
                 'username' => $faker->userName,
