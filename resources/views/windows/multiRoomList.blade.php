@@ -26,7 +26,7 @@
                                        @foreach($salas as $sala)
                                        <tr>
                                            <td>{{ $sala->NSala }}</td>
-                                           <td>{{ $sala->Username }}</td>                        
+                                           <td>{{ $sala->username }}</td>                        
                                        </tr>
                                        @endforeach
                                     </tbody>
