@@ -11,9 +11,17 @@ use App\User;
 
 class NewRoom extends Controller
 {
+    $Celes = [];
     public function __costruct()
     {
         $this->middleware('auth');
+    }
+    public function noRepetir($x)
+    {
+        if(in_array($Celes,$x)){
+            return false;
+        }
+        return true;
     }
 
     public function generarCelesCorrectes($minim)
@@ -22,9 +30,12 @@ class NewRoom extends Controller
         $Celes = array($minim);
 
         for ($i=0; $i < $minim-1; $i++) { 
-            array_push($Celes,random_int(0,$minim-1));
+            $rand = random_int(0,$minim-1);
+            if($this->noRepetir($rand)){
+                array_push($Celes,$rand);
+            }
         }
-        
+       
         return json_encode($Celes);
 
     }

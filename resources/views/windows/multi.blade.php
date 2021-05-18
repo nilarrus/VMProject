@@ -9,9 +9,9 @@
     <div id="header" class="mb-4">
         
         
-        <form action="{{ route('deleteRoom')}}" method="post" id="formReturn" style="display: none">
+        <form action="{{ route('deleteRoom')}}" method="post" id="formReturn" >
             @csrf
-            <input type="text" name="nsala" id="nsala" value="{{$_POST["nsala"]}}"><br/>
+            <input type="text" name="nsala" id="nsala" value="{{$_POST["nsala"]}}" hidden><br/>
             <button class="btn btn-dark" type="submit">Return</button><br/>
         </form>
     </div>
