@@ -7,8 +7,15 @@
 <div class="container">
 
     <div id="header" class="mb-4">
-        
-        
+        <div class="game centrado">     
+            <table id="table" class="table-game">
+                
+                    <!-- generado por js -->
+                
+            </table>
+        </div>
+
+        <button class="btn btn-primary" type="button" onclick="SGame({{$JsonCorrectes}})"> Start</button>
         <form action="{{ route('deleteRoom')}}" method="post" id="formReturn" >
             @csrf
             <input type="text" name="nsala" id="nsala" value="{{$_POST["nsala"]}}" hidden><br/>
@@ -23,7 +30,6 @@
 </div>
 <script> 
     var test = {{$JsonCorrectes}};
-    console.log(test);
-    StartFunction() 
+    console.log(test); 
 </script>
 @endsection

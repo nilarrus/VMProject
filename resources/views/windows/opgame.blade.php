@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
-@section('content')
+@section('content')   
+<script src="{{ URL::asset('js/general.js')}}"></script>
+<script src="{{ URL::asset('js/efects.js')}}"></script>
+
 <div class="container">
     
     <div class="text-center">

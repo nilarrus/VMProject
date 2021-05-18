@@ -3,6 +3,7 @@
 @section('content')
     
 <!-- JavaScript -->
+<script src="{{ URL::asset('js/menu.js')}}"></script>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
