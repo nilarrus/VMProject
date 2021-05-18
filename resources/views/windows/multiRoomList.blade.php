@@ -37,7 +37,7 @@
                                 <div class="col-md-auto mb-5">
                                     <form action="{{ route('multiMenu')}}" method="post" id="formReturn">
                                         @csrf
-                                        <button class="btn btn-dark" type="submit">Return</button><br/>
+                                        <button class="btn btn-dark" type="submit">Borrar sala</button><br/>
                                     </form>
                                 </div>
                             </div>
