@@ -37,8 +37,6 @@
 <script> 
     var CCorrectes = {{$JsonCorrectes}};
     var level = $("#nivel").text();
-    console.log("level: ",level);
-    console.log("Cel·les: ",CCorrectes); 
     $("#start").on("click",function(){
         SGame(CCorrectes,level);
     });
