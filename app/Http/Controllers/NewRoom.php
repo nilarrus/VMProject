@@ -80,8 +80,8 @@ class NewRoom extends Controller
         $ustsal->NSala = $request->nsala;
         $ustsal->UsEmail = $this->EmailUser($request->user);
         
-        
-        $JsonCorrectes = $this->generarCelesCorrectes($request->level);
+        $n = $request->c+1;
+        $JsonCorrectes = $this->generarCelesCorrectes($n);
 
         $sala->Celes = $JsonCorrectes;
         $sala->save();
