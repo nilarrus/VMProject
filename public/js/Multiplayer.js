@@ -8,7 +8,7 @@ function generarTauler(rows,cols) {
         //Columnas
         for (let col = 0; col < cols; col++) {
             //Unimos las columnas con la filas
-            tr.append($('<td>').attr('class','cel'));
+            tr.append($('<td>').attr('class','celda'));
         }
         //filas al body
         tbody.append(tr);
@@ -18,6 +18,7 @@ function generarTauler(rows,cols) {
 }
 
 function SGame(JsonCeles,level) {
-    generarTauler(level+2,level+2);
+    rc = level+2;
+    generarTauler(rc,rc);
     console.log("Dins la funcio: ",JsonCeles);
 }
