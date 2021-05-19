@@ -10,7 +10,14 @@ function generarTauler(rows,cols) {
             //Unimos las columnas con la filas
             tr.append($('<td>').attr('class','cel'));
         }
-        //
-        
+        //filas al body
+        tbody.append(tr);
     }
+    //Añadimos el tbody a la tabla
+    $('#table').append(tbody);
+}
+
+function SGame(JsonCeles,level) {
+    generarTauler(level);
+    console.log("Dins la funcio: ",JsonCeles);
 }

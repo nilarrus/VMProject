@@ -44,8 +44,11 @@ class NewRoom extends Controller
             $cela = $this->noRepetir($Celes,$minim);
             array_push($Celes,$cela);
         }
+       $jsCeles = json_encode($Celes);
+
        
-        return json_encode($Celes);
+       
+        return $jsCeles;
 
     }
 
@@ -69,9 +72,7 @@ class NewRoom extends Controller
         // Generar sala
         $sala = new Sala;
         $sala->NSala = $request->nsala;
-        $sala->SPassword = $request->spas;
-        
-        $sala->save();
+        $sala->SPassword = $request->spas; 
         
         //Generar relacion entre la sala creada i el usuario que la ha creado
         
@@ -82,7 +83,10 @@ class NewRoom extends Controller
         $ustsal->save();
         
         $JsonCorrectes = $this->generarCelesCorrectes(3);
-        var_dump($JsonCorrectes);
+
+        $sala->Celes = $JsonCorrectes;
+        $sala->save();
+
         return view('windows.multi',['JsonCorrectes' => $JsonCorrectes]);
     }
     public function DeleteTemp(Request $request)

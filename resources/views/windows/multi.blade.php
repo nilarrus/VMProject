@@ -7,6 +7,10 @@
 <div class="container">
 
     <div id="header" class="mb-4">
+        <div id="level" class="row mb-0 mt-0">           
+            <div class="col text-right">Nivel</div>
+            <div id="nivel" class="col text-left">@php echo $_POST["level"];@endphp</div> 
+        </div>
         <div class="game centrado">     
             <table id="table" class="table-game">
                 
@@ -15,7 +19,7 @@
             </table>
         </div>
 
-        <button class="btn btn-primary" type="button" onclick="SGame({{$JsonCorrectes}})"> Start</button>
+        <button id="start" class="btn btn-primary" type="button" > Start</button>
         <form action="{{ route('deleteRoom')}}" method="post" id="formReturn" >
             @csrf
             <input type="text" name="nsala" id="nsala" value="{{$_POST["nsala"]}}" hidden><br/>
@@ -29,7 +33,12 @@
     </div>
 </div>
 <script> 
-    var test = {{$JsonCorrectes}};
-    console.log(test); 
+    var CCorrectes = {{$JsonCorrectes}};
+    var level = $("#nivel").text();
+    console.log(level);
+    console.log(CCorrectes); 
+    $("#start").on("click",function(){
+        SGame(CCorrectes,level);
+    });
 </script>
 @endsection
