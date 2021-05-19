@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+<!-- JQuery -->
+<script src="{{ URL::asset('js/Multiplayer.js')}}"></script>
 <!-- Ajax -->
 <script src="{{ URL::asset('js/ajax.js')}}"></script>
 
