@@ -25,8 +25,8 @@
                                         <input type="text" name="spas" id="spas" ><br/>
                                         <input type="text" name="user" id="user" hidden value="{{ Auth::user()->username }}">
                                         <input type="text" name="level" id="level" hidden value="1">
-                                        <input type="text" name="c" id="c" hidden value="2">
-                                        <button class="btn btn-lg btn-primary" type="submit">Jugar</button><br/>
+                                        <input type="text" name="c" id="c" hidden value="2"><br/>
+                                        <button class="btn btn-lg btn-primary" type="submit">Jugar</button>
                                     </form>
                                 </div>
                             </div>

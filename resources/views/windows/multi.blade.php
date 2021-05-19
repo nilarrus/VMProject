@@ -21,7 +21,7 @@
             </table>
         </div>
 
-        <button id="start" class="btn btn-primary" type="button" > Start</button>
+        <button id="start" class="btn btn-primary" type="button" > Taula </button>
         <form action="{{ route('deleteRoom')}}" method="post" id="formReturn" >
             @csrf
             <input type="text" name="nsala" id="nsala" value="{{$_POST["nsala"]}}" hidden><br/>
