@@ -25,7 +25,7 @@
         <form action="{{ route('deleteRoom')}}" method="post" id="formReturn" >
             @csrf
             <input type="text" name="nsala" id="nsala" value="{{$_POST["nsala"]}}" hidden><br/>
-            <button class="btn btn-dark" type="submit">Return</button><br/>
+            <button class="btn btn-dark" type="submit">Borrar sala</button><br/>
         </form>
     </div>
     <div id="info_user" class="row mb-0 mt-0" style="display: none">
