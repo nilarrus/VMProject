@@ -38,6 +38,7 @@ class NewRoom extends Controller
 
     public function generarCelesCorrectes($minim,$nsala)
     {
+        var_dump($nsala);
         $PasHashedSala = Sala::where('NSala',$nsala)->pluck('SPassword');
         var_dump($PasHashedSala);
         $Celes = array($minim);
