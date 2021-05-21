@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 use App\Sala;
 use App\UserToSala;
 use App\User;
@@ -40,7 +41,7 @@ class NewRoom extends Controller
     public function generarCelesCorrectes($minim,$nsala)
     {
         var_dump($nsala);
-        $PasHashedSala = Sala::where('NSala',$nsala)->pluck('SPassword');
+        $PasHashedSala = DB::table('Sala')->where('NSala',$nsala )->pluck('SPassword');
         var_dump($PasHashedSala);
         $Celes = array($minim);
 
