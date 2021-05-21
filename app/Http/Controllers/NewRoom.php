@@ -73,7 +73,8 @@ class NewRoom extends Controller
         // Generar sala
         $sala = new Sala;
         $sala->NSala = $request->nsala;
-        $sala->SPassword = Hash::make($request->spas);
+        $PassHashSala = Hash::make($request->spas);
+        $sala->SPassword = $PassHashSala;
          
         
         //Generar relacion entre la sala creada i el usuario que la ha creado
