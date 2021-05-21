@@ -21,7 +21,8 @@ class NewRoom extends Controller
 
     public function randInt($min)
     {
-        return random_int(0,$min-1);
+        $real = $min*$min;
+        return random_int(0,$real-1);
     }
 
     public function noRepetir($Celes,$min)
