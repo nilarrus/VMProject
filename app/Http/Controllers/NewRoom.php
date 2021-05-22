@@ -44,7 +44,7 @@ class NewRoom extends Controller
         
         $Celes = array($minim);
         array_push($Celes,$pasw);
-
+        var_dump($Celes);
         for ($i=0; $i < $minim-1; $i++) { 
             $cela = $this->noRepetir($Celes,$minim);
             array_push($Celes,$cela);
