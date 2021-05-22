@@ -35,7 +35,7 @@
     </div>
 </div>
 <script> 
-    var CCorrectes = {{$JsonCorrectes}};
+    {{var_dump($JsonCorrectes)}};
     var level = parseInt($("#nivel").text());
     $("#start").on("click",function(){
         SGame(CCorrectes,level);
