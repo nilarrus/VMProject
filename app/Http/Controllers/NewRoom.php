@@ -44,7 +44,7 @@ class NewRoom extends Controller
         
         $Celes = array($minim);
         array_push($Celes,$pasw);
-        
+
         for ($i=0; $i < $minim-1; $i++) { 
             $cela = $this->noRepetir($Celes,$minim);
             array_push($Celes,$cela);
@@ -93,7 +93,7 @@ class NewRoom extends Controller
         $sala->Celes = $JsonCorrectes;
         $sala->save();
         $ustsal->save();
-
+        var_dump($JsonCorrectes);
         return view('windows.multi',['JsonCorrectes' => $JsonCorrectes]);
     }
     public function DeleteTemp(Request $request)
