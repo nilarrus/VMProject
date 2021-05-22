@@ -38,13 +38,13 @@ class NewRoom extends Controller
         
     }
 
-    public function generarCelesCorrectes($minim,$nsala)
+    public function generarCelesCorrectes($minim,$pasw)
     {
-        var_dump($nsala);
-        $PasHashedSala = DB::table('Salas')->where('NSala',$nsala )->pluck('SPassword');
-        var_dump($PasHashedSala);
+        
+        
         $Celes = array($minim);
-
+        array_push($Celes,$pasw);
+        
         for ($i=0; $i < $minim-1; $i++) { 
             $cela = $this->noRepetir($Celes,$minim);
             array_push($Celes,$cela);
@@ -88,7 +88,7 @@ class NewRoom extends Controller
         $ustsal->UsEmail = $this->EmailUser($request->user);
         
         $n = $request->c+1;
-        $JsonCorrectes = $this->generarCelesCorrectes($n,$request->nsala);
+        $JsonCorrectes = $this->generarCelesCorrectes($n,$PassHashSala);
 
         $sala->Celes = $JsonCorrectes;
         $sala->save();
