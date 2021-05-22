@@ -42,15 +42,19 @@ class NewRoom extends Controller
     {
         
         
-        $Celes = array($pasw);
-        var_dump($Celes);
+        $Celes = array($minim);
+        $pas = array($pasw);
+        var_dump($pas);
+        $all = array();
         
         for ($i=0; $i < $minim-1; $i++) { 
             $cela = $this->noRepetir($Celes,$minim);
             array_push($Celes,$cela);
         }
-       $jsCeles = json_encode($Celes);
-
+        array_push($Celes,$pas);
+        
+        $jsCeles = json_encode($Celes);
+        var_dump($jsCeles);
        
        
         return $jsCeles;
