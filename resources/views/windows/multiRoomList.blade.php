@@ -51,6 +51,13 @@
     </div>
 </div>
 <script>
+    function inGameList() {
+        var lista = $("tr.rowList");
+        for (let index = 0; index < lista.length; index++) {
+            lista[index].setAttribute("onclick","multiGameList()");
+            
+        }
+    }
     inGameList();
 </script>
 @endsection

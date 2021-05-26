@@ -1,13 +1,6 @@
 function multiGameList() {
     
 }
-function inGameList() {
-    var lista = $("tr.rowList");
-    for (let index = 0; index < lista.length; index++) {
-        lista[index].setAttribute("onclick","multiGameList()");
-        
-    }
-}
 
 function generarTauler(rows,cols) {
     // tbody
