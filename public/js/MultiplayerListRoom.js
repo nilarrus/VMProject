@@ -1,6 +1,6 @@
 function multiGameList(z) {
     var temp = z
-    console.log(temp.firstChild.innerHTML);
+    console.log(temp.children[0]);
 }
 function inGameList() {
     var lista = $("tr#rowList");
