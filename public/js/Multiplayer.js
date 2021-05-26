@@ -1,7 +1,3 @@
-function multiGameList() {
-    
-}
-
 function generarTauler(rows,cols) {
     // tbody
     var tbody = $('<tbody>');

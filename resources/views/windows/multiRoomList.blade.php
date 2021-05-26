@@ -4,7 +4,7 @@
     
 <!-- JavaScript -->
 <!-- JQuery -->
-<script src="{{ URL::asset('js/Multiplayer.js')}}"></script>
+<script src="{{ URL::asset('js/MultiplayerListRoom.js')}}"></script>
 
 <div class="container">
     <div class="row justify-content-center">
@@ -51,14 +51,7 @@
     </div>
 </div>
 <script>
-    function inGameList() {
-        var lista = $("tr#rowList");
-        console.log(lista);
-        for (let index = 0; index < lista.length; index++) {
-            lista[index].setAttribute("onclick","multiGameList()");
-            
-        }
-    }
+    
     inGameList();
 </script>
 @endsection
