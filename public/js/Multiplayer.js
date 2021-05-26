@@ -2,7 +2,11 @@ function multiGameList() {
     
 }
 function inGameList() {
-    
+    var lista = $("tr.rowList");
+    for (let index = 0; index < lista.length; index++) {
+        lista[index].setAttribute("onclick","multiGameList()");
+        
+    }
 }
 
 function generarTauler(rows,cols) {
@@ -30,5 +34,4 @@ function SGame(JsonCeles,level) {
     rc = level+2;
     generarTauler(rc,rc);
     console.log("Dins la funcio: ",JsonCeles);
-    console.log(rc);
 }

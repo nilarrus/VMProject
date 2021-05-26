@@ -26,7 +26,7 @@
                                     </thead>
                                     <tbody>                    
                                        @foreach($salas as $sala)
-                                       <tr>
+                                       <tr id="rowList">
                                            <td>{{ $sala->NSala }}</td>
                                            <td>{{ $sala->username }}</td>                        
                                        </tr>
