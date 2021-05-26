@@ -50,4 +50,7 @@
         </div>
     </div>
 </div>
+<script>
+    inGameList();
+</script>
 @endsection
