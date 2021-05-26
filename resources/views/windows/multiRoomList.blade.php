@@ -3,6 +3,8 @@
 @section('content')
     
 <!-- JavaScript -->
+<!-- JQuery -->
+<script src="{{ URL::asset('js/Multiplayer.js')}}"></script>
 
 <div class="container">
     <div class="row justify-content-center">

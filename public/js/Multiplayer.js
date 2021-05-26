@@ -1,3 +1,10 @@
+function multiGameList() {
+    
+}
+function inGameList() {
+    
+}
+
 function generarTauler(rows,cols) {
     // tbody
     var tbody = $('<tbody>');
@@ -15,6 +22,8 @@ function generarTauler(rows,cols) {
     }
     //Añadimos el tbody a la tabla
     $('#table').append(tbody);
+    //on Click
+    inGameList();
 }
 
 function SGame(JsonCeles,level) {
