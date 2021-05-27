@@ -59,7 +59,7 @@
             xhr.setRequestHeader('X-CSRF-Token', getCSRFTokenValue());
         }
     });
-    console.log(getCSRFTokenValue());
+    
     inGameList();
 </script>
 @endsection
