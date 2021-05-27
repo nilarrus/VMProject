@@ -54,7 +54,7 @@
     </div>
 </div>
 <script>
-    var t = {{echo csrf_token()}};
+    var t = {{csrf_token()}};
     console.log(t);
     inGameList();
 </script>
