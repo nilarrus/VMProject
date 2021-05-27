@@ -3,7 +3,7 @@ function checkPassword(tr) {
     $.ajax({
         type: "POST",
         url: "/mplrch",
-        data: {pass: passw},
+        data: {_token: getCSRFTokenValue() ,pass: passw},
         success: function (response) {
             alert(response);
         }
