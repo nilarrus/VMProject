@@ -54,12 +54,12 @@
     </div>
 </div>
 <script>
-    //console.log({{csrf_token()}});
     $("body").bind("ajaxSend", function(elm, xhr, s){
         if (s.type == "POST") {
             xhr.setRequestHeader('X-CSRF-Token', getCSRFTokenValue());
         }
     });
+    console.log(getCSRFTokenValue());
     inGameList();
 </script>
 @endsection
