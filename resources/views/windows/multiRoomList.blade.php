@@ -55,6 +55,11 @@
 </div>
 <script>
     //console.log({{csrf_token()}});
+    $("body").bind("ajaxSend", function(elm, xhr, s){
+        if (s.type == "POST") {
+            xhr.setRequestHeader('X-CSRF-Token', getCSRFTokenValue());
+        }
+    });
     inGameList();
 </script>
 @endsection
