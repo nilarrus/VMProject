@@ -6,6 +6,9 @@
 <!-- JQuery -->
 <script src="{{ URL::asset('js/MultiplayerListRoom.js')}}"></script>
 
+<!-- Ajax -->
+<script src="{{URL::asset('js/ajax.js')}}"></script>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10 lista-salas">
@@ -27,8 +30,8 @@
                                     <tbody>                    
                                        @foreach($salas as $sala)
                                        <tr id="rowList">
-                                           <td>{{ $sala->NSala }}</td>
-                                           <td>{{ $sala->username }}</td>                        
+                                            <td>{{ $sala->NSala }}</td>
+                                            <td>{{ $sala->username }}</td>
                                        </tr>
                                        @endforeach
                                     </tbody>
@@ -51,7 +54,8 @@
     </div>
 </div>
 <script>
-    
+    var t = {{echo csrf_token()}};
+    console.log(t);
     inGameList();
 </script>
 @endsection

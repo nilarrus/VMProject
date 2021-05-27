@@ -18,4 +18,11 @@ class GameListRoom extends Controller
         
         return view('windows.multiRoomList',['salas' => $salas]);        
     }
+
+    //check pasword with name room
+    public function checkPasRoom(Request $request)
+    {
+        var_dump($request);
+       return response()->json($request, 200);
+    }
 }
