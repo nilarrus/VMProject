@@ -19,7 +19,7 @@
                         <div class="col-md-12 text-center">
                             <div class="row justify-content-md-center"> <!-- lista salas en espera -->
                                 <div class="header text-center">
-                                    <form class="checkPass" id="checkPass" action="{{ route('multiRoomPass')}}" method="post">
+                                    <form class="checkPass" id="checkPass" action="{{ route('multiRoomPass')}}" method="post" hidden >
                                         @csrf
                                         <input type="text" name="nsala" id="nsala" value="">
                                         <input type="text" name="creador" id="creador" value="">
