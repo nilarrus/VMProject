@@ -19,17 +19,12 @@
                         <div class="col-md-12 text-center">
                             <div class="row justify-content-md-center"> <!-- lista salas en espera -->
                                 <div class="header text-center">
-                                    <form action="{{ route('multiRoomPass')}}" method="post">
+                                    <form class="checkPass" id="checkPass" action="{{ route('multiRoomPass')}}" method="post">
                                         @csrf
                                         <input type="text" name="nsala" id="nsala" value="">
                                         <input type="text" name="creador" id="creador" value="">
                                         <button class="btn btn-lg btn-primary" type="submit">Check</button>
                                     </form>
-                                    {!! Form::open(array('route' => 'multiRoomPass')) !!}
-                                    {!! Form::text($nsala) !!}
-                                    {!! Form::text($creador) !!}
-                                    {!! Form::submit($check) !!}
-                                    {!! Form::close() !!}
                                 </div>
                                 <table class="table table-striped table-dark">
                                     <thead>
