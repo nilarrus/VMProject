@@ -22,7 +22,11 @@ class GameListRoom extends Controller
     //check pasword with name room
     public function checkPasRoom(Request $request)
     {
-        var_dump($request->pass);
-       return response()->json($request, 200);
+        /*SELECT * from salas where NSalas = "$request->nsala"*/ 
+
+        
+        var_dump($request);
+        
+        return redirect()->route('multiMenu');
     }
 }
