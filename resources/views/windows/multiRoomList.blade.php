@@ -32,7 +32,7 @@
                                     
                                 </div>
                                 @php
-                                    var_dump(array_values($salas));
+                                    var_dump($salas);
                                     if(empty($salas)){
                                         echo "True";
                                     }else{
