@@ -32,8 +32,12 @@
                                     
                                 </div>
                                 @php
-                                    //if(emty($salas))
                                     var_dump($salas);
+                                    if(empty($salas)){
+                                        echo "True";
+                                    }else{
+                                        echo "false";
+                                    }
                                 @endphp
                                 <table class="table table-striped table-dark">
                                     <thead>
