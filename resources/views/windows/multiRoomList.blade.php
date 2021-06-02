@@ -31,6 +31,10 @@
                                 <div class="header text-center">
                                     
                                 </div>
+                                @php
+                                    //if(emty($salas))
+                                    var_dump($salas);
+                                @endphp
                                 <table class="table table-striped table-dark">
                                     <thead>
                                     <tr>
