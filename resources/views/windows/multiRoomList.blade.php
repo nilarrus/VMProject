@@ -33,7 +33,7 @@
                                 </div>
                                 @php
                                     var_dump($salas);
-                                    if(empty($salas)){
+                                    if(empty($salas->NSala)){
                                         echo "True";
                                     }else{
                                         echo "false";
