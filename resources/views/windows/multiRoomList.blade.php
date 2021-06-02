@@ -31,14 +31,6 @@
                                 <div class="header text-center">
                                     
                                 </div>
-                                @php
-                                    var_dump($salas);
-                                    if(empty($salas->NSala)){
-                                        echo "True";
-                                    }else{
-                                        echo "false";
-                                    }
-                                @endphp
                                 <table class="table table-striped table-dark">
                                     <thead>
                                     <tr>
