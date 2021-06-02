@@ -32,8 +32,8 @@
                                     
                                 </div>
                                 @php
-                                    var_dump($salas->total);
-                                    if(empty($salas->total)){
+                                    var_dump($salas);
+                                    if(empty($salas)){
                                         echo "True";
                                     }else{
                                         echo "false";
