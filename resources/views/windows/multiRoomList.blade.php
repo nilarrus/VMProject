@@ -21,13 +21,15 @@
                 </form>
             </div>
             <div class="card">
-                <div class="card-header bg-dark text-white"></div>
+                <div class="card-header bg-dark text-white">
+                    Lista de salas
+                </div>
                 <div class="card-body bg-secondary text-white">
                     <div class="container">
                         <div class="col-md-12 text-center">
                             <div class="row justify-content-md-center"> <!-- lista salas en espera -->
                                 <div class="header text-center">
-                                    Lista de salas
+                                    
                                 </div>
                                 <table class="table table-striped table-dark">
                                     <thead>
