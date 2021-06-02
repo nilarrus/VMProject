@@ -12,19 +12,22 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10 lista-salas">
+            <div>
+                <form class="checkPass" id="checkPass" action="{{ route('multiRoomPass')}}" method="post" hidden >
+                    @csrf
+                    <input type="text" name="nsala" id="nsala" value="">
+                    <input type="text" name="creador" id="creador" value="">
+                    <button class="btn btn-lg btn-primary" type="submit">Check</button>
+                </form>
+            </div>
             <div class="card">
-                <div class="card-header bg-dark text-white">Lista de Salas en espera</div>
+                <div class="card-header bg-dark text-white"></div>
                 <div class="card-body bg-secondary text-white">
                     <div class="container">
                         <div class="col-md-12 text-center">
                             <div class="row justify-content-md-center"> <!-- lista salas en espera -->
                                 <div class="header text-center">
-                                    <form class="checkPass" id="checkPass" action="{{ route('multiRoomPass')}}" method="post" hidden >
-                                        @csrf
-                                        <input type="text" name="nsala" id="nsala" value="">
-                                        <input type="text" name="creador" id="creador" value="">
-                                        <button class="btn btn-lg btn-primary" type="submit">Check</button>
-                                    </form>
+                                    Lista de salas
                                 </div>
                                 <table class="table table-striped table-dark">
                                     <thead>
