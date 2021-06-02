@@ -32,7 +32,7 @@
                                     
                                 </div>
                                 @php
-                                    var_dump($salas);
+                                    var_dump(array_values($salas));
                                     if(empty($salas)){
                                         echo "True";
                                     }else{
@@ -72,13 +72,7 @@
         </div>
     </div>
 </div>
-<script>
-    $("body").bind("ajaxSend", function(elm, xhr, s){
-        if (s.type == "POST") {
-            xhr.setRequestHeader('X-CSRF-Token', getCSRFTokenValue());
-        }
-    });
-    
+<script>    
     inGameList();
 </script>
 @endsection
