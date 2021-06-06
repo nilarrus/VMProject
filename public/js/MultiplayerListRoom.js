@@ -2,8 +2,8 @@ function multiGameList(z) {
     //$("#FormPass").css("display", "block");
 
     var temp = z
-    alert(temp.children[0].innerHTML);
-    alert(temp.children[1].innerHTML);
+    alert(temp.children[0].innerHTML);// nom sala 
+    alert(temp.children[1].innerHTML);// creador sala
     
 }
 function inGameList() {
