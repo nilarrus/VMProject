@@ -86,7 +86,7 @@
 <script>    
     inGameList();
     // display form hidden jquery
-    $("#FromPass").css("display", "none");
+    $("#FormPass").css("display", "none");
     
 </script>
 @endsection

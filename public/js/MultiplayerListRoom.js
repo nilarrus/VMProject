@@ -1,7 +1,9 @@
 function multiGameList(z) {
-    $("#id").css("display", "block");
+    //$("#FormPass").css("display", "block");
+
     var temp = z
     alert(temp.children[0].innerHTML);
+    alert(temp.children[1].innerHTML);
     
 }
 function inGameList() {
