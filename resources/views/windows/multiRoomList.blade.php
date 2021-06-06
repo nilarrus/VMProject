@@ -17,15 +17,15 @@
                 <form class="checkPass" id="checkPass" action="{{ route('multiRoomPass')}}" method="post">
                     @csrf
                     <div class="form-group row">
-                        <label for="nsala" class="col-form-label">Identificador de la sala</label>
-                        <input type="text" name="nsala" id="nsala" value="" disabled>
+                        <label for="nsala" class="col-form-label">2090ab</label>
+                        <input type="text" name="nsala" id="nsala" value="" style="display: none">
                     </div>
                     <div class="form-group row">
-                        <label for="creador">Creador de la sala</label>
-                        <input type="text" name="creador" id="creador" value="" disabled>
+                        <label for="creador" class="col-fom-label">ejJugador1</label>
+                        <input type="text" name="creador" id="creador" value="" style="display: none">
                     </div>
                     <div class="form-group row">
-                        <label for="pass">Contraseña</label>
+                        <label for="pass" class="col-fom-label">Contraseña</label>
                         <input type="password" name="pass" id="pass" value="">
                     </div>
                     <div class="form-group row">
@@ -86,5 +86,7 @@
 <script>    
     inGameList();
     // display form hidden jquery
+    $("#FromPass").css("display", "none");
+    
 </script>
 @endsection

@@ -1,4 +1,5 @@
 function multiGameList(z) {
+    $("#id").css("display", "block");
     var temp = z
     alert(temp.children[0].innerHTML);
     
