@@ -13,14 +13,28 @@
 
     <div class="text-center">
         <div id="FormPass" class="FormPass">
-        <div id="FPContent">
-            <form class="checkPass" id="checkPass" action="{{ route('multiRoomPass')}}" method="post">
-                @csrf
-                <input type="text" name="nsala" id="nsala" value="">
-                <input type="text" name="creador" id="creador" value="">
-                <button class="btn btn-lg btn-primary" type="submit">Check</button>
-            </form>
+            <div id="FPContent">
+                <form class="checkPass" id="checkPass" action="{{ route('multiRoomPass')}}" method="post">
+                    @csrf
+                    <div class="form-group row">
+                        <label for="nsala" class="col-form-label">Identificador de la sala</label>
+                        <input type="text" name="nsala" id="nsala" value="" disabled>
+                    </div>
+                    <div class="form-group row">
+                        <label for="creador">Creador de la sala</label>
+                        <input type="text" name="creador" id="creador" value="" disabled>
+                    </div>
+                    <div class="form-group row">
+                        <label for="pass">Contraseña</label>
+                        <input type="password" name="pass" id="pass" value="">
+                    </div>
+                    <div class="form-group row">
+                        <button class="btn btn-lg btn-primary" type="submit">Check</button>
+                    </div>
+                </form>
+            </div>
         </div>
+        <div class="alert alert-danger">Error</div>
     </div>
 
     <div class="row justify-content-center">
