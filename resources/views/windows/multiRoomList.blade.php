@@ -10,16 +10,21 @@
 <script src="{{URL::asset('js/ajax.js')}}"></script>
 
 <div class="container">
+
+    <div class="text-center">
+        <div id="FormPass" class="FormPass">
+        <div id="FPContent">
+            <form class="checkPass" id="checkPass" action="{{ route('multiRoomPass')}}" method="post">
+                @csrf
+                <input type="text" name="nsala" id="nsala" value="">
+                <input type="text" name="creador" id="creador" value="">
+                <button class="btn btn-lg btn-primary" type="submit">Check</button>
+            </form>
+        </div>
+    </div>
+
     <div class="row justify-content-center">
         <div class="col-md-10 lista-salas">
-            <div>
-                <form class="checkPass" id="checkPass" action="{{ route('multiRoomPass')}}" method="post" hidden >
-                    @csrf
-                    <input type="text" name="nsala" id="nsala" value="">
-                    <input type="text" name="creador" id="creador" value="">
-                    <button class="btn btn-lg btn-primary" type="submit">Check</button>
-                </form>
-            </div>
             <div class="card">
                 <div class="card-header bg-dark text-white">
                     Lista de salas
@@ -66,5 +71,6 @@
 </div>
 <script>    
     inGameList();
+    // display form hidden jquery
 </script>
 @endsection

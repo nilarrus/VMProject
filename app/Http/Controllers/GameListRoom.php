@@ -18,12 +18,6 @@ class GameListRoom extends Controller
         
         return view('windows.multiRoomList',['salas' => $salas]);        
     }
-
-    //blade password
-    public function inputPassword(Request $request)
-    {
-        return view('widows.roomPass');
-    }
     //check pasword with name room
     public function checkPasRoom(Request $request)
     {
@@ -34,4 +28,12 @@ class GameListRoom extends Controller
         
         return redirect()->route('multiRoomList');
     }
+    //blade password
+    public function inputPassword(Request $request)
+    {
+        var_dump($request);   
+        
+        return view('widows.roomPass');
+    }
+    
 }

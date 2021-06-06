@@ -22,6 +22,7 @@
     <link href="{{ URL::asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ URL::asset('css/masterStyle.css')}}">
     <link rel="stylesheet" href="{{ URL::asset('css/efects.css')}}">
+    <link rel="stylesheet" href="{{ URL::asset('css/listRoom.css')}}">
    
 
 
