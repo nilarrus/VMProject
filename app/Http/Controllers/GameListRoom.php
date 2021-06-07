@@ -49,12 +49,13 @@ class GameListRoom extends Controller
 
         
         $passCheck = $this->checkPasRoom($request);  
-        $all = array();    
+        /*$all = array();    
         array_push($all,array($celes->Celes));
+        */
         //array_push($all,array($Password->SPassword));
        
 
-        $JsonCeles = json_encode($all);
+        $JsonCeles = json_encode($celes->Celes);
 
         var_dump("Valor JSON " , $JsonCeles);
         
