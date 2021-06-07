@@ -51,7 +51,7 @@ class GameListRoom extends Controller
         $passCheck = $this->checkPasRoom($request);  
         $all = array();    
         array_push($all,array($celes->Celes));
-        array_push($all,array($Password->SPassword));
+        //array_push($all,array($Password->SPassword));
        
 
         $JsonCeles = json_encode($all);

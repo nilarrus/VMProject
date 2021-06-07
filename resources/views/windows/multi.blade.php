@@ -34,13 +34,11 @@
 </div>
 <script> 
     
-    console.log({{$JsonCorrectes}});
-    /*
+    //console.log({{$JsonCorrectes}});
     var CCorrectes = {{$JsonCorrectes}};
     var level = parseInt($("#nivel").text());
     $("#start").on("click",function(){
         SGame(CCorrectes,level);
     });
-    */
 </script>
 @endsection
