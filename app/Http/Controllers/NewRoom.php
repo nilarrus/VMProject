@@ -86,7 +86,7 @@ class NewRoom extends Controller
         $n = $request->c+1;
         $Celes = $this->generarCelesCorrectes($n);
 
-        $sala->Celes = $Celes;
+        $sala->Celes = json_encode($Celes);
         $sala->save();
         $ustsal->save();
 
@@ -94,7 +94,7 @@ class NewRoom extends Controller
         array_push($all,$Celes);
         array_push($all,$PassHashSala);
         $JsonCorrectes = json_encode($all);
-        
+
         var_dump($JsonCorrectes);
 
         return view('windows.multi',['JsonCorrectes' => $JsonCorrectes]);
