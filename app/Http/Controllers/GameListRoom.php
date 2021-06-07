@@ -56,11 +56,12 @@ class GameListRoom extends Controller
        
 
         $JsonCeles = $celes->Celes;
+        $creador = strval($request->creador);
 
         //var_dump("Valor JSON " , $JsonCeles);
 
         if($passCheck){
-            return view('windows.multi',['JsonCorrectes'=> $JsonCeles,'creador'=>$request->creador]);
+            return view('windows.multi',['JsonCorrectes'=> $JsonCeles,'creador'=>$creador]);
         }
         return redirect()->back()->withErrors(['Error'=>'Password incorrecto',]);
         
