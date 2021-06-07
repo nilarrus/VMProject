@@ -21,7 +21,7 @@
 
         <button id="start" class="btn btn-primary" type="button" > Taula </button>
         @php
-           $c = {{ Auth::user()->username }};
+           $c =  Auth::user()->username ;
         @endphp
         <form action="{{ route('deleteRoom')}}" method="post" id="formReturn" >
             @csrf
