@@ -24,7 +24,7 @@
            $c =  Auth::user()->username ;
            echo $c;
            echo $creador;
-           if(Auth::user()->username == $creadro){
+           if(Auth::user()->username == $creador){
                 echo "True";
            }else{
                echo "False";
