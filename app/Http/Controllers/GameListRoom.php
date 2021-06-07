@@ -36,7 +36,7 @@ class GameListRoom extends Controller
         //var_dump($request->creador);
         //var_dump($request->pass);   
 
-        $pass = $this->checkPasRoom($request);
+        $pass = $this->checkPasRoom($request)->toArray();
         
        // $val= Hash::check("1234", $pass->SPassword);
         //var_dump("Valor check hash ", $val);
