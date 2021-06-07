@@ -33,7 +33,7 @@
     </div>
 </div>
 <script> 
-    {{$JsonCorrectes}}
+    //{{$JsonCorrectes}}
    // console.log({{$JsonCorrectes}});
     /*
     var CCorrectes = {{$JsonCorrectes}};
