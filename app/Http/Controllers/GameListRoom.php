@@ -29,7 +29,10 @@ class GameListRoom extends Controller
                     ->where('NSala','=',$request->nsala)
                     ->first();
                     
-        return $Password->SPassword;
+        if(Hash::check($request->pass, $Password->SPassword)){
+            return true;
+        }
+        return false;
     }
     //blade password
     public function inputPassword(Request $request)
@@ -38,13 +41,9 @@ class GameListRoom extends Controller
         //var_dump($request->creador);
         //var_dump($request->pass);   
 
-        $pass = $this->checkPasRoom($request);
-        
-        $val = Hash::check("1234", $pass);
-        var_dump("Valor check hash ", $val);
-        
+        $pass = $this->checkPasRoom($request);      
 
-        var_dump("Valor de la bbdd " , $pass);
+        var_dump("Valor de la funcion " , $pass);
 
         return view('windows.roomPass');
     }
