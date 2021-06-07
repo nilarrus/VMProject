@@ -1,10 +1,13 @@
 function multiGameList(z) {
-    //$("#FormPass").css("display", "block");
+    $("#FormPass").css("display", "block");
 
     var temp = z
-    alert(temp.children[0].innerHTML);// nom sala 
-    alert(temp.children[1].innerHTML);// creador sala
+    $("#lnsala").html(temp.children[0].innerHTML);
+    $("#nsala").val(temp.children[0].innerHTML);
+    $("#lcreador").html(temp.children[1].innerHTML);
+    $("#creador").val(temp.children[1].innerHTML);
     
+    alert($("#nsala").val()+$("#creador").val());
 }
 function inGameList() {
     var lista = $("tr#rowList");

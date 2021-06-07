@@ -6,9 +6,6 @@
 <!-- JQuery -->
 <script src="{{ URL::asset('js/MultiplayerListRoom.js')}}"></script>
 
-<!-- Ajax -->
-<script src="{{URL::asset('js/ajax.js')}}"></script>
-
 <div class="container">
 
     <div class="text-center">
@@ -17,11 +14,11 @@
                 <form class="checkPass" id="checkPass" action="{{ route('multiRoomPass')}}" method="post">
                     @csrf
                     <div class="form-group row">
-                        <label for="nsala" class="col-form-label">2090ab</label>
+                        <label id="lnsala" for="nsala" class="col-form-label">2090ab</label>
                         <input type="text" name="nsala" id="nsala" value="" style="display: none">
                     </div>
                     <div class="form-group row">
-                        <label for="creador" class="col-fom-label">ejJugador1</label>
+                        <label id="lcreador" for="creador" class="col-fom-label">ejJugador1</label>
                         <input type="text" name="creador" id="creador" value="" style="display: none">
                     </div>
                     <div class="form-group row">
