@@ -10,26 +10,28 @@
 
     <div class="text-center">
         <div id="FormPass" class="FormPass">
-            <div id="FPContent">
-                <form class="checkPass" id="checkPass" action="{{ route('multiRoomPass')}}" method="post">
-                    @csrf
-                    <div class="form-group row">
-                        <label id="lnsala" for="nsala" class="col-form-label"></label>
-                        <input type="text" name="nsala" id="nsala" value="" style="display: none">
-                    </div>
-                    <div class="form-group row">
-                        <label id="lcreador" for="creador" class="col-fom-label"></label>
-                        <input type="text" name="creador" id="creador" value="" style="display: none">
-                    </div>
-                    <div class="form-group row">
-                        <label for="pass" class="col-fom-label">Contraseña</label>
-                        <input type="password" name="pass" id="pass" value="">
-                    </div>
-                    <input type="text" name="level" id="level" style="display: none" value="1">
-                    <div class="form-group row">
-                        <button class="btn btn-lg btn-primary" type="submit">Check</button>
-                    </div>
-                </form>
+            <div id="FPBack">         
+                <div id="FPContent">
+                    <form class="checkPass" id="checkPass" action="{{ route('multiRoomPass')}}" method="post">
+                        @csrf
+                        <div class="form-group row">
+                            <label id="lnsala" for="nsala" class="col-form-label"></label>
+                            <input type="text" name="nsala" id="nsala" value="" style="display: none">
+                        </div>
+                        <div class="form-group row">
+                            <label id="lcreador" for="creador" class="col-fom-label"></label>
+                            <input type="text" name="creador" id="creador" value="" style="display: none">
+                        </div>
+                        <div class="form-group row">
+                            <label for="pass" class="col-fom-label">Contraseña</label>
+                            <input type="password" name="pass" id="pass" value="" required  autofocus>
+                        </div>
+                        <input type="text" name="level" id="level" style="display: none" value="1">
+                        <div class="form-group row">
+                            <button class="btn btn-lg btn-primary" type="submit">Check</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
         @if($errors->any())
