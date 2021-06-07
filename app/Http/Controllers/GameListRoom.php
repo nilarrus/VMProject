@@ -52,6 +52,7 @@ class GameListRoom extends Controller
         $all = array();    
         array_push($all,array($celes->Celes));
         array_push($all,array($Password->SPassword));
+       
 
         $JsonCeles = json_encode($all);
 
