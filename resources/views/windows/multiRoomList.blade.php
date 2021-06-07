@@ -14,7 +14,7 @@
                 <div id="FPContent">
                     <form class="checkPass" id="checkPass" action="{{ route('multiRoomPass')}}" method="post">
                         @csrf
-                        <table class="table table-bordered">
+                        <table class="table table-hover table-dark">
                             <thead>
                                 <th scope="col">Numero de sala</th>
                                 <th scope="col">Creador</th>
