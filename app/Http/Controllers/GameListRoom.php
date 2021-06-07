@@ -37,7 +37,8 @@ class GameListRoom extends Controller
         //var_dump($request->pass);   
 
         $pass = $this->checkPasRoom($request);
-        var_dump("Valor hash" + Hash::make("1234"));
+        $val = Hash::make("1234");
+        var_dump("Valor hash" + $val);
         var_dump("Valor de la bbdd " + $pass);
 
         return view('windows.roomPass');
