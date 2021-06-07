@@ -57,7 +57,6 @@ class GameListRoom extends Controller
 
         $JsonCeles = $celes->Celes;
         $creador = strval($request->creador);
-        var_dump($creador);
         //var_dump("Valor JSON " , $JsonCeles);
 
         if($passCheck){
