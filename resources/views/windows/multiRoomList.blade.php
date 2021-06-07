@@ -14,11 +14,11 @@
                 <form class="checkPass" id="checkPass" action="{{ route('multiRoomPass')}}" method="post">
                     @csrf
                     <div class="form-group row">
-                        <label id="lnsala" for="nsala" class="col-form-label">2090ab</label>
+                        <label id="lnsala" for="nsala" class="col-form-label"></label>
                         <input type="text" name="nsala" id="nsala" value="" style="display: none">
                     </div>
                     <div class="form-group row">
-                        <label id="lcreador" for="creador" class="col-fom-label">ejJugador1</label>
+                        <label id="lcreador" for="creador" class="col-fom-label"></label>
                         <input type="text" name="creador" id="creador" value="" style="display: none">
                     </div>
                     <div class="form-group row">
