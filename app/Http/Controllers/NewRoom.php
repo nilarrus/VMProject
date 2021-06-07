@@ -99,7 +99,7 @@ class NewRoom extends Controller
         $JsonCorrectes =json_encode($Celes);
         
         
-        var_dump($JsonCorrectes);
+        //var_dump($JsonCorrectes);
 
         return view('windows.multi',['JsonCorrectes' => $JsonCorrectes,'creador'=>$request->user]);
     }
