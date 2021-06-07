@@ -22,6 +22,7 @@
         <button id="start" class="btn btn-primary" type="button" > Taula </button>
         @php
            $c =  Auth::user()->username ;
+           echo $c;
         @endphp
         <form action="{{ route('deleteRoom')}}" method="post" id="formReturn" >
             @csrf
@@ -31,7 +32,7 @@
     </div>
 </div>
 <script> 
-    var c = {{$creador}};
+    var c = String({{$creador}});
     console.log(c);
     console.log({{$JsonCorrectes}});
     var CCorrectes = {{$JsonCorrectes}};
