@@ -95,9 +95,11 @@ class NewRoom extends Controller
         array_push($all,$PassHashSala);
         $JsonCorrectes = json_encode($all);
 
-        var_dump($JsonCorrectes);
+        
+        $js = json_decode($JsonCorrectes,true);
+        var_dump($js);
 
-        return view('windows.multi',['JsonCorrectes' => json_decode($JsonCorrectes,true)]);
+        return view('windows.multi',['JsonCorrectes' => $JsonCorrectes]);
     }
     public function DeleteTemp(Request $request)
     {
