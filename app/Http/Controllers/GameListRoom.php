@@ -22,20 +22,25 @@ class GameListRoom extends Controller
     public function checkPasRoom(Request $request)
     {
         /*SELECT * from salas where NSalas = "$request->nsala"*/ 
-
-
+        $Password = DB::table('salas')
+                    ->where('salas.nsalas','=',$request->nsala)
+                    ->get();
         
         
-        return redirect()->route('multiRoomList');
+        
+        return $Password;
     }
     //blade password
     public function inputPassword(Request $request)
     {
-        var_dump($request->nsala);
-        var_dump($request->creador);
-        var_dump($request->pass);   
-        
-        return view('widows.roomPass');
+        //var_dump($request->nsala);
+        //var_dump($request->creador);
+        //var_dump($request->pass);   
+
+        $pass = $this->checkPasRoom($request);
+        var_dump($pass);
+
+        return view('windows.roomPass');
     }
     
 }
