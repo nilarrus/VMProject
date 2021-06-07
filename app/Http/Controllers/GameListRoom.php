@@ -57,7 +57,7 @@ class GameListRoom extends Controller
 
         $JsonCeles = json_encode($celes->Celes);
 
-        var_dump("Valor JSON " , $JsonCeles);
+        //var_dump("Valor JSON " , $JsonCeles);
 
         if($passCheck){
             return view('windows.multi',['JsonCorrectes'=> $JsonCeles]);
