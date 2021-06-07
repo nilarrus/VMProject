@@ -23,10 +23,12 @@ class GameListRoom extends Controller
     public function checkPasRoom(Request $request)
     {
         /*SELECT * from salas where NSalas = "$request->nsala"*/ 
-        $Password = DB::table('salas')
+        /*$Password = DB::table('salas')
                     ->select('SPassword')
                     ->where('NSala','=',$request->nsala)
                     ->get();
+                    */
+                    $Password = App\Sala::find(1)->SPassword;
         return $Password;
     }
     //blade password
@@ -37,9 +39,10 @@ class GameListRoom extends Controller
         //var_dump($request->pass);   
 
         $pass = $this->checkPasRoom($request);
-        
+        /*
         $val = Hash::check("1234", $pass);
         var_dump("Valor check hash ", $val);
+        */
 
         var_dump("Valor de la bbdd " , $pass);
 
