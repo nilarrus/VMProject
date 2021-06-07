@@ -44,10 +44,10 @@ class GameListRoom extends Controller
                     ->where('NSala','=',$request->nsala)
                     ->first();
 
-        $arrayCeles = $celes->toArray();
+        
         $pass = $this->checkPasRoom($request);  
         $all = array();    
-        array_push($all,$arrayCeles);
+        array_push($all,array($celes));
         array_push($all,array($pass));
 
         $JsonCeles = json_encode($all);
