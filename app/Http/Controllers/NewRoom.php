@@ -56,7 +56,7 @@ class NewRoom extends Controller
         array_push($all,$pas);
         
         //var_dump($all);
-        $jsCeles = json_encode($Celes);
+        $jsCeles = json_encode($all);
         
        
        
