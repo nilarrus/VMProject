@@ -38,21 +38,24 @@ class GameListRoom extends Controller
     //blade password
     public function inputPassword(Request $request)
     {
-        // celes de la base de dades. 
+        $Password = DB::table('salas')
+                    ->select('SPassword')
+                    ->where('NSala','=',$request->nsala)
+                    ->first(); 
         $celes = DB::table('salas')
                     ->select('Celes')
                     ->where('NSala','=',$request->nsala)
                     ->first();
 
         
-        $pass = $this->checkPasRoom($request);  
+        $passCheck = $this->checkPasRoom($request);  
         $all = array();    
         //array_push($all,array($celes));
-        array_push($all,array($pass));
+        array_push($all,array($Password));
 
         $JsonCeles = json_encode($all);
 
-        var_dump("Valor de la funcion " , $pass);
+        var_dump("Valor de la funcion " , $Password);
         var_dump("valor de las celdas ", $celes);
         /*
         if($pass){
