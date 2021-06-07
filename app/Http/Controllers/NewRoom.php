@@ -38,28 +38,17 @@ class NewRoom extends Controller
         
     }
 
-    public function generarCelesCorrectes($minim,$pasw)
+    public function generarCelesCorrectes($minim)
     {
         
-        
-        $Celes = array($minim);
-        $pas = array($pasw);
-        //var_dump($pas);
-        $all = array();
+        $Celes = array($minim);       
         
         for ($i=0; $i < $minim-1; $i++) { 
             $cela = $this->noRepetir($Celes,$minim);
             array_push($Celes,$cela);
         }
-        
-        array_push($all,$Celes);
-        array_push($all,$pas);
-        
-        //var_dump($all);
-        $jsCeles = json_encode($all);
-        
-       
-       
+             
+        $jsCeles = $Celes;
         return $jsCeles;
 
     }
@@ -95,11 +84,17 @@ class NewRoom extends Controller
         $ustsal->UsEmail = $this->EmailUser($request->user);
         
         $n = $request->c+1;
-        $JsonCorrectes = $this->generarCelesCorrectes($n,$PassHashSala);
+        $Celes = $this->generarCelesCorrectes($n);
 
-        $sala->Celes = $JsonCorrectes;
+        $sala->Celes = $Celes;
         $sala->save();
         $ustsal->save();
+
+        $all = array();
+        array_push($all,$Celes);
+        array_push($all,$PassHashSala);
+        $JsonCorrectes = json_encode($all);
+        
         var_dump($JsonCorrectes);
 
         return view('windows.multi',['JsonCorrectes' => $JsonCorrectes]);
