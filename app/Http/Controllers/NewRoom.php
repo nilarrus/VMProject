@@ -100,7 +100,7 @@ class NewRoom extends Controller
         $sala->Celes = $JsonCorrectes;
         $sala->save();
         $ustsal->save();
-        //var_dump($JsonCorrectes);
+        var_dump($JsonCorrectes);
 
         return view('windows.multi',['JsonCorrectes' => $JsonCorrectes]);
     }
