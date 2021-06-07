@@ -37,15 +37,29 @@ class GameListRoom extends Controller
     //blade password
     public function inputPassword(Request $request)
     {
-        //var_dump($request->nsala);
-        //var_dump($request->creador);
-        //var_dump($request->pass);   
+        // celes de la base de dades. 
+        $celes = DB::table('salas')
+                    ->select('Celes')
+                    ->where('NSala','=',$request->nsala)
+                    ->first();
 
-        $pass = $this->checkPasRoom($request);      
+        $arrayCeles = $celes->toArray();
+        $pass = $this->checkPasRoom($request);  
+        $all = array();    
+        array_push($all,$arrayCeles);
+        array_push($all,array($pass));
+
+        $JsonCeles = json_encode($all);
 
         var_dump("Valor de la funcion " , $pass);
-
-        return view('windows.roomPass');
+        var_dump("valor de las celdas ", $JsonCeles);
+        /*
+        if($pass){
+            return view('windows.multi',['JsonCorrectes'=> $JsonCeles]);
+        }
+        return redirect()->back()->withErrors(['Error','Password incorrecto']);
+        */
+        return view("windows.roomPass");
     }
     
 }

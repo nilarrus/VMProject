@@ -31,7 +31,9 @@
                 </form>
             </div>
         </div>
-        <div class="alert alert-danger">Error</div>
+        @if($errors->any())
+            <div class="alert alert-danger">{{$errors->first()}}</div>
+        @endif
     </div>
 
     <div class="row justify-content-center">
