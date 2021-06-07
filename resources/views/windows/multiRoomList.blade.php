@@ -14,12 +14,24 @@
                 <div id="FPContent">
                     <form class="checkPass" id="checkPass" action="{{ route('multiRoomPass')}}" method="post">
                         @csrf
+                        <table class="table table-striped table-dark">
+                            <thead>
+                                <th scope="col">Numero de sala</th>
+                                <th scope="col">Creador</th>
+                            </thead>
+                            <tbody>                    
+                               <tr id="rowList">
+                                    <td id="lnsala"></td>
+                                    <td id="lcreador"></td>
+                               </tr>
+                            </tbody>
+                         </table>
                         <div class="form-group row">
-                            <label id="lnsala" for="nsala" class="col-form-label"></label>
+                            <!--<label id="lnsala" for="nsala" class="col-form-label"></label>-->
                             <input type="text" name="nsala" id="nsala" value="" style="display: none">
                         </div>
                         <div class="form-group row">
-                            <label id="lcreador" for="creador" class="col-fom-label"></label>
+                            <!--<label id="lcreador" for="creador" class="col-fom-label"></label>-->
                             <input type="text" name="creador" id="creador" value="" style="display: none">
                         </div>
                         <div class="form-group row">
@@ -50,7 +62,7 @@
                         <div class="col-md-12 text-center">
                             <div class="row justify-content-md-center"> <!-- lista salas en espera -->
                                 <div class="header text-center">
-                                    
+     
                                 </div>
                                 <table class="table table-striped table-dark">
                                     <thead>
