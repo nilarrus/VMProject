@@ -90,11 +90,13 @@ class NewRoom extends Controller
         $sala->save();
         $ustsal->save();
 
+        /*
         $all = array();
         array_push($all,$Celes);
         array_push($all,$PassHashSala);
         $JsonCorrectes = json_encode($all);
-
+        */
+        $JsonCorrectes =json_encode($Celes);
         
         
         var_dump($JsonCorrectes);
