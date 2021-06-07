@@ -24,6 +24,11 @@
            $c =  Auth::user()->username ;
            echo $c;
            echo $creador;
+           if(Auth::user()->username == $creadro){
+                echo "True";
+           }else{
+               echo "False";
+           }
         @endphp
         <form action="{{ route('deleteRoom')}}" method="post" id="formReturn" >
             @csrf
@@ -33,8 +38,6 @@
     </div>
 </div>
 <script> 
-    var c = {{$creador}}.toString();
-    console.log(String(c));
     console.log({{$JsonCorrectes}});
     var CCorrectes = {{$JsonCorrectes}};
     var level = parseInt($("#nivel").text());
