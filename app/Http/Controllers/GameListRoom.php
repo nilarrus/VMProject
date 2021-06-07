@@ -64,7 +64,7 @@ class GameListRoom extends Controller
         }
         return redirect()->back()->withErrors(['Error','Password incorrecto']);
         */
-        return view("windows.roomPass");
+        return view("windows.roomPass",['JsonCorrectes' => $JsonCeles]);
     }
     
 }

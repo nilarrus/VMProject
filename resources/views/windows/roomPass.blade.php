@@ -2,5 +2,5 @@
 
 @section('content')
 <div> bien</div>
-
+{{$JsonCorrectes}}
 @endsection
