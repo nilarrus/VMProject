@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use App\UserToSala;
+use App\Sala;
 
 class GameListRoom extends Controller
 {
@@ -23,13 +24,12 @@ class GameListRoom extends Controller
     public function checkPasRoom(Request $request)
     {
         /*SELECT * from salas where NSalas = "$request->nsala"*/ 
-        /*$Password = DB::table('salas')
+        $Password = DB::table('salas')
                     ->select('SPassword')
                     ->where('NSala','=',$request->nsala)
-                    ->get();
-                    */
-                    $Password = App\Sala::find(1)->SPassword;
-        return $Password;
+                    ->first();
+                    
+        return $Password->SPassword;
     }
     //blade password
     public function inputPassword(Request $request)
