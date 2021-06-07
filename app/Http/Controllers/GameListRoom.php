@@ -50,13 +50,13 @@ class GameListRoom extends Controller
         
         $passCheck = $this->checkPasRoom($request);  
         $all = array();    
-        //array_push($all,array($celes));
-        array_push($all,array($Password));
+        array_push($all,array($celes->Celes));
+        array_push($all,array($Password->SPassword));
 
         $JsonCeles = json_encode($all);
 
-        var_dump("Valor de la funcion " , $Password);
-        var_dump("valor de las celdas ", $celes);
+        var_dump("Valor JSON " , $JsonCeles);
+        
         /*
         if($pass){
             return view('windows.multi',['JsonCorrectes'=> $JsonCeles]);
