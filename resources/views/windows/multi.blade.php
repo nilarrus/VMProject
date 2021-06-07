@@ -20,21 +20,14 @@
         </div>
 
         <button id="start" class="btn btn-primary" type="button" > Taula </button>
-        @php
-           $c =  Auth::user()->username ;
-           echo $c;
-           echo $creador;
-           if(Auth::user()->username == $creador){
-                echo "True";
-           }else{
-               echo "False";
-           }
-        @endphp
-        <form action="{{ route('deleteRoom')}}" method="post" id="formReturn" >
-            @csrf
-            <input type="text" name="nsala" id="nsala" value="{{$_POST["nsala"]}}" hidden><br/>
-            <button class="btn btn-dark" type="submit">Borrar sala</button><br/>
-        </form>
+        @if (Auth::user()->username == $creador)
+            <form action="{{ route('deleteRoom')}}" method="post" id="formReturn" >
+                @csrf
+                <input type="text" name="nsala" id="nsala" value="{{$_POST["nsala"]}}" hidden><br/>
+                <button class="btn btn-dark" type="submit">Borrar sala</button><br/>
+            </form>
+        @endif
+        
     </div>
 </div>
 <script> 
