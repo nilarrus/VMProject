@@ -25,6 +25,7 @@
                         <label for="pass" class="col-fom-label">Contraseña</label>
                         <input type="password" name="pass" id="pass" value="">
                     </div>
+                    <input type="text" name="level" id="level" style="display: none" value="1">
                     <div class="form-group row">
                         <button class="btn btn-lg btn-primary" type="submit">Check</button>
                     </div>

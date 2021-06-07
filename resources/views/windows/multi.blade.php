@@ -26,11 +26,6 @@
             <button class="btn btn-dark" type="submit">Borrar sala</button><br/>
         </form>
     </div>
-    <div id="info_user" class="row mb-0 mt-0" style="display: none">
-        <div id="Email"> {{$_POST["user"]}} </div><br>
-        <div id="NSala">{{$_POST["nsala"]}}</div><br>
-        <div id="Password">{{$_POST["spas"]}}</div><br>
-    </div>
 </div>
 <script> 
     
