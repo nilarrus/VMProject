@@ -23,11 +23,8 @@ class GameListRoom extends Controller
     {
         /*SELECT * from salas where NSalas = "$request->nsala"*/ 
         $Password = DB::table('salas')
-                    ->where('salas.nsalas','=',$request->nsala)
+                    ->where('NSala','=',$request->nsala)
                     ->get();
-        
-        
-        
         return $Password;
     }
     //blade password
