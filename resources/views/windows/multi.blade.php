@@ -33,7 +33,7 @@
     </div>
 </div>
 <script> 
-    console.log({{json_decode($JsonCorrectes,true)}});
+    console.log({{$JsonCorrectes}});
     /*
     var CCorrectes = {{$JsonCorrectes}};
     var level = parseInt($("#nivel").text());
