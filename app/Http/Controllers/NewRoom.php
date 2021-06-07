@@ -97,7 +97,7 @@ class NewRoom extends Controller
 
         var_dump($JsonCorrectes);
 
-        return view('windows.multi',['JsonCorrectes' => $JsonCorrectes]);
+        return view('windows.multi',['JsonCorrectes' => json_decode($JsonCorrectes,true)]);
     }
     public function DeleteTemp(Request $request)
     {
