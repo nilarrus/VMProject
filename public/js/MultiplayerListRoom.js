@@ -7,7 +7,7 @@ function multiGameList(z) {
     $("#lcreador").html(temp.children[1].innerHTML);
     $("#creador").val(temp.children[1].innerHTML);
     
-    alert($("#nsala").val()+$("#creador").val());
+    alert($("#nsala").val()+$("#creador").val()+ "Canvios hechos");
 }
 function inGameList() {
     var lista = $("tr#rowList");
