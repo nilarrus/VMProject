@@ -24,14 +24,16 @@ class GameListRoom extends Controller
         /*SELECT * from salas where NSalas = "$request->nsala"*/ 
 
 
-        var_dump($request);
+        
         
         return redirect()->route('multiRoomList');
     }
     //blade password
     public function inputPassword(Request $request)
     {
-        var_dump($request);   
+        var_dump($request->nsala);
+        var_dump($request->creador);
+        var_dump($request->pass);   
         
         return view('widows.roomPass');
     }
