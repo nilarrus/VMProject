@@ -41,7 +41,7 @@ class GameListRoom extends Controller
        // $val= Hash::check("1234", $pass->SPassword);
         //var_dump("Valor check hash ", $val);
 
-        var_dump("Valor de la bbdd " , $pass);
+        var_dump("Valor de la bbdd " , $pass->SPassword);
 
         return view('windows.roomPass');
     }
