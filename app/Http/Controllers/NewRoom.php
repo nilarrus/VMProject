@@ -96,8 +96,8 @@ class NewRoom extends Controller
         $JsonCorrectes = json_encode($all);
 
         
-        $js = json_decode($JsonCorrectes,true);
-        var_dump($js);
+        
+        var_dump($JsonCorrectes);
 
         return view('windows.multi',['JsonCorrectes' => $JsonCorrectes]);
     }
