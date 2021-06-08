@@ -14,13 +14,13 @@ class ajaxcalls extends Controller
     public function getCels(Request $request)
     {
         
-        $celes = json_encode( DB::table('salas')
-                                ->select('Celes')
-                                ->where('NSala','=',$request->nsala)
-                                ->first());
+        $celes = DB::table('salas')
+                    ->select('Celes')
+                    ->where('NSala','=',$request->nsala)
+                    ->first();
         
         
-        return response()->json(array('msg'=>strval($celes)), 200);
+        return response()->json(array('msg'=>$celes->toArray())), 200);
     }
 
 }
