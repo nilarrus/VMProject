@@ -20,7 +20,7 @@ class ajaxcalls extends Controller
                     ->first();
         
         $c = json_encode($celes);
-        return response()->json(array('msg'=>$c, 200);
+        return response()->json(array('msg'=>$c, 200));
     }
 
 }
