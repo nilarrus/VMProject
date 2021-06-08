@@ -41,6 +41,6 @@ Route::get('ajax', function () {
     return view('ajaxTest');
 });
 
-Route::post('/getm', 'ajxController@MsgAjx')->name('tAjax');
+Route::post('/getm', 'ajxController@msgajax')->name('tAjax');
 
 
