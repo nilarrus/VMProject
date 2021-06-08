@@ -14,6 +14,7 @@
                 url: "{{route('tAjax')}}",
                 data: '_token = <?php echo csrf_token() ?> ',
                 success: function (data) {
+                    alert(data);
                     $("#msg").html(data.msg);
                 }
             });
