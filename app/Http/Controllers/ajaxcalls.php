@@ -19,8 +19,8 @@ class ajaxcalls extends Controller
                     ->where('NSala','=',$request->nsala)
                     ->first();
         
-        
-        return response()->json(array('msg'=>$celes->toArray()), 200);
+        $c = json_encode($celes);
+        return response()->json(array('msg'=>$c, 200);
     }
 
 }
