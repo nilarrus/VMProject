@@ -8,7 +8,7 @@ function celesServer() {
             "nsala" : " 1235ab "
         },
         success: function (backd) {
-            console.log(backd);
+            console.log(backd.msg);
             //$("#msg").html(data.msg);
         }
     });
