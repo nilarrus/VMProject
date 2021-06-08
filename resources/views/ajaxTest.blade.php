@@ -15,7 +15,6 @@
                 url: "{{route('tAjax')}}",
                 headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
                 success: function (data) {
-                    console.log(data);
                     $("#msg").html(data.msg);
                 }
             });
