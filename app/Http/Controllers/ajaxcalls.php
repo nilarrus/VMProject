@@ -11,14 +11,14 @@ class ajaxcalls extends Controller
     //call al server per info des de ajax
     public function getCels(Request $request)
     {
-        /*
+        
         $celes = DB::table('salas')
                     ->select('Celes')
                     ->where('NSala','=',$request->nsala)
                     ->first();
-        */
         
-        return response()->json(array('msg'=>$request->nsala), 200);
+        
+        return response()->json(array('msg'=>$celes), 200);
     }
 
 }
