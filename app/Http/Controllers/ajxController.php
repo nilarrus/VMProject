@@ -13,6 +13,6 @@ class ajxController extends Controller
     {
         var_dump($msg);
         $msg = 'Misatge del server';
-        return response()->json('msg'=>$msg, 200);
+        return response()->json(array('msg'=>$msg), 200);
     }
 }

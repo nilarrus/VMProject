@@ -27,7 +27,6 @@
         Hola
     </div>
     <button type="button" onclick="getMessage()">Replace msg</button>
-    {!! Form::submit("Replece msg", ['onclick'=>'getMessage()']) !!}
     
 </body>
 </html>
