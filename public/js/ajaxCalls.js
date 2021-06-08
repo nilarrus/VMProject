@@ -8,7 +8,7 @@ function celesServer(nSala) {
             "nsala" : nSala
         },
         success: function (backd) {
-            console.log(backd);
+            console.log(backd.Celes);
             //$("#msg").html(data.msg);
         }
     });
