@@ -1,11 +1,11 @@
-function celesServer() {
+function celesServer(nSala) {
     console.log("call");
     $.ajax({
         type: 'POST',
         url: "/c",
         headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
         data:{
-            "nsala" : " 1235ab "
+            "nsala" : nSala
         },
         success: function (backd) {
             console.log(backd);
