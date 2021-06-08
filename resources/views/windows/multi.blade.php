@@ -20,7 +20,8 @@
             </table>
         </div>
         <div id="backAjax"></div>
-        <button id="start" class="btn btn-primary" type="button" > Taula </button>
+        <button id="start" class="btn btn-primary" type="button" onclick="celesServer()" > Call ajax </button>
+
         @if (Auth::user()->username == $creador)
             <form action="{{ route('deleteRoom')}}" method="post" id="formReturn" >
                 @csrf

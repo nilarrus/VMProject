@@ -1,4 +1,5 @@
 function celesServer() {
+    console.log("call");
     $.ajax({
         type: 'POST',
         url: "/c",
@@ -12,8 +13,3 @@ function celesServer() {
         }
     });
 }
-
-$("#start").on("click",function () {
-    celesServer();
-    
-});
