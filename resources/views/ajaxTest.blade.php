@@ -10,11 +10,10 @@
      <script src="{{ URL::asset('js/jquery-3.6.0.min.js')}}"></script>
     <script>
         function getMessage() {
-            {{ route('tAjax')}}
             $.ajax({
                 type: 'POST',
                 url: "{{route('tAjax')}}",
-                data: '_token = {{csrf_token()}} ',
+                headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
                 success: function (data) {
                     alert(data);
                     $("#msg").html(data.msg);
