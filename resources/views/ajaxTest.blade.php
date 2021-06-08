@@ -21,8 +21,6 @@
     <div id="msg">
         Hola
     </div>
-    <?php
-      echo Form::button('Replace Message',['onClick'=>'getMessage()'])
-    ?>
+    {!! Form::submit("Replece msg", ['onclick'=>'getMessage()']) !!}
 </body>
 </html>
