@@ -36,3 +36,10 @@ Route::post('/store', 'GamePlayerOne@store')->name('store');
 Route::get('/r', 'rank@getRanking')->name('rank');
 
 
+//test ajax
+Route::get('ajax', function () {
+    return view('ajaxTest');
+});
+Route::post('/getm', 'ajxController@MsgAjx')->name('tAjax');
+
+
