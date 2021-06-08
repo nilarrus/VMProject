@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Http\Controller\Controller;
+use App\Http\Controllers\Controller;
 
 
 class ajxController extends Controller
