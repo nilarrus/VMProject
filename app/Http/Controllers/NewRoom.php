@@ -90,18 +90,8 @@ class NewRoom extends Controller
         $sala->save();
         $ustsal->save();
 
-        /*
-        $all = array();
-        array_push($all,$Celes);
-        array_push($all,$PassHashSala);
-        $JsonCorrectes = json_encode($all);
-        */
-        $JsonCorrectes =json_encode($Celes);
-        
-        
-        //var_dump($JsonCorrectes);
 
-        return view('windows.multi',['JsonCorrectes' => $JsonCorrectes,'creador'=>$request->user]);
+        return view('windows.multi',['creador'=>$request->user]);
     }
     public function DeleteTemp(Request $request)
     {

@@ -26,6 +26,9 @@ Route::get('/mplrl', 'GameListRoom@launchSelectListRoom')->name('multiRoomList')
 //Llençar la sala multiplayer
 Route::post('/mplsl', 'NewRoom@newRoom')->name('multisala');
 
+//calls Ajax
+Route::post('/c','ajaxcalls@getCels')->name('correctCels');
+
 //ruta temp 
 Route::post('/mpDelete', 'NewRoom@DeleteTemp')->name('deleteRoom');
 

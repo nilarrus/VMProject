@@ -3,6 +3,7 @@
 @section('content')
 <!-- JQuery -->
 <script src="{{ URL::asset('js/Multiplayer.js')}}"></script>
+<script src="{{ URL::asset('js/ajaxCalls.js')}}"></script>
 
 <div class="container">
 
@@ -18,7 +19,7 @@
                 
             </table>
         </div>
-
+        <div id="backAjax"></div>
         <button id="start" class="btn btn-primary" type="button" > Taula </button>
         @if (Auth::user()->username == $creador)
             <form action="{{ route('deleteRoom')}}" method="post" id="formReturn" >
@@ -31,11 +32,10 @@
     </div>
 </div>
 <script> 
-    console.log({{$JsonCorrectes}});
-    var CCorrectes = {{$JsonCorrectes}};
+    {{$creador}}
     var level = parseInt($("#nivel").text());
-    $("#start").on("click",function(){
+    /*$("#start").on("click",function(){
         SGame(CCorrectes,level);
-    });
+    });*/
 </script>
 @endsection

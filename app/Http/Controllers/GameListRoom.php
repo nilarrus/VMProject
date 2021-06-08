@@ -42,25 +42,13 @@ class GameListRoom extends Controller
                     ->select('SPassword')
                     ->where('NSala','=',$request->nsala)
                     ->first(); 
-        $celes = DB::table('salas')
-                    ->select('Celes')
-                    ->where('NSala','=',$request->nsala)
-                    ->first();
 
-        
         $passCheck = $this->checkPasRoom($request);  
-        /*$all = array();    
-        array_push($all,array($celes->Celes));
-        */
-        //array_push($all,array($Password->SPassword));
-       
 
-        $JsonCeles = $celes->Celes;
         $creador = strval($request->creador);
-        //var_dump("Valor JSON " , $JsonCeles);
 
         if($passCheck){
-            return view('windows.multi',['JsonCorrectes'=> $JsonCeles,'creador'=>$creador]);
+            return view('windows.multi',['creador'=>$creador]);
         }
         return redirect()->back()->withErrors(['Error'=>'Password incorrecto',]);
         

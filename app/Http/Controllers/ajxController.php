@@ -11,7 +11,6 @@ class ajxController extends Controller
 {
     public function msgajax()
     {
-        
         $msg = 'Misatge del server';
         return response()->json(array('msg'=>$msg), 200);
     }
