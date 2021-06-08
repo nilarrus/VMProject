@@ -40,6 +40,7 @@ Route::get('/r', 'rank@getRanking')->name('rank');
 Route::get('ajax', function () {
     return view('ajaxTest');
 });
+
 Route::post('/getm', 'ajxController@MsgAjx')->name('tAjax');
 
 

@@ -8,9 +8,10 @@
     </script>
     <script>
         function getMessage() {
+            {{ route('tAjax')}}
             $.ajax({
                 type: 'POST',
-                url: '/getm',
+                url: "{{route('tAjax')}}",
                 data: '_token = <?php echo csrf_token() ?> ',
                 success: function (data) {
                     $("#msg").html(data.msg);
