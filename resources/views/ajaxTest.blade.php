@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     
     <title>Ajaxt test</title>
-    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
-    </script>
+     <!-- Jquery -->
+     <script src="{{ URL::asset('js/jquery-3.6.0.js')}}"></script>
+     <script src="{{ URL::asset('js/jquery-3.6.0.min.js')}}"></script>
     <script>
         function getMessage() {
             {{ route('tAjax')}}
