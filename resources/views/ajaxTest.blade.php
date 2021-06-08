@@ -14,7 +14,7 @@
             $.ajax({
                 type: 'POST',
                 url: "{{route('tAjax')}}",
-                data: '_token' : '{{csrf_token()}} ',
+                data: '_token = {{csrf_token()}} ',
                 success: function (data) {
                     alert(data);
                     $("#msg").html(data.msg);
