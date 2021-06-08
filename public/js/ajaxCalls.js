@@ -9,7 +9,7 @@ function celesServer(nSala) {
         },
         success: function (backd) {
             console.log(backd.msg);
-            $("#backAjax").html(backd.msg);
+            $("#backAjax").html(backd.msg.Celes);
         }
     });
 }
