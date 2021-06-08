@@ -2,7 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Ajaxt test</title>
      <!-- Jquery -->
      <script src="{{ URL::asset('js/jquery-3.6.0.js')}}"></script>
