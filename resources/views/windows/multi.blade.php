@@ -32,7 +32,6 @@
     </div>
 </div>
 <script> 
-    {{$creador}}
     var level = parseInt($("#nivel").text());
     /*$("#start").on("click",function(){
         SGame(CCorrectes,level);
