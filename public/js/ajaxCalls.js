@@ -8,8 +8,8 @@ function celesServer(nSala) {
             "nsala" : nSala
         },
         success: function (backd) {
-            console.log(backd);
-            $("#backAjax").html(backd);
+            console.log(backd.msg);
+            $("#backAjax").html(backd.msg);
         }
     });
 }
