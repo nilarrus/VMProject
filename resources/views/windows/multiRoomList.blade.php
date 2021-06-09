@@ -12,7 +12,7 @@
         <div id="FormPass" class="FormPass">
             <div id="FPBack">         
                 <div id="FPContent">
-                    <form class="checkPass align-items-center" id="checkPass" action="{{ route('multiRoomPass')}}" method="post">
+                    <form class="checkPass " id="checkPass" action="{{ route('multiRoomPass')}}" method="post">
                         @csrf
                         <!--
                             <table class="table table-dark">
@@ -29,7 +29,7 @@
                          </table>
                         -->
                          <div class="row ">
-                             <div class="row alig-items-center">
+                             <div class="row ">
                                 <div class="col-auto">
                                     <div>Numero de sala</div>
                                 </div>
@@ -37,7 +37,7 @@
                                     <div id="lnsala"></div>
                                 </div>
                              </div>
-                             <div class="row alig-items-center">
+                             <div class="row ">
                                 <div class="col-auto">
                                     <div>Creador</div>
                                 </div>
