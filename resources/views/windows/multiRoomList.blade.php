@@ -36,8 +36,6 @@
                                 <div class="col-auto">
                                     <div id="lnsala"></div>
                                 </div>
-                             </div>
-                             <div class="row ">
                                 <div class="col-auto">
                                     <div>Creador</div>
                                 </div>
