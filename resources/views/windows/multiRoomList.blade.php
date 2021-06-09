@@ -12,7 +12,7 @@
         <div id="FormPass" class="FormPass">
             <div id="FPBack">         
                 <div id="FPContent">
-                    <form class="checkPass" id="checkPass" action="{{ route('multiRoomPass')}}" method="post">
+                    <form class="checkPass align-items-center" id="checkPass" action="{{ route('multiRoomPass')}}" method="post">
                         @csrf
                         <table class="table table-dark">
                             <thead>
@@ -26,18 +26,19 @@
                                </tr>
                             </tbody>
                          </table>
+
                         <input type="text" name="nsala" id="nsala" value="" style="display: none">
                         <input type="text" name="creador" id="creador" value="" style="display: none">
-                        <div class="form-group row">
+                        <div class="form-group">
                             <label for="pass" class="col-form-label">Contraseña: </label>
-                            <input type="password" name="pass" id="pass" value="" required  autofocus>
+                            <input type="password" class="form-control" name="pass" id="pass" value="" required  autofocus>
                         </div>
                         <input type="text" name="level" id="level" style="display: none" value="1">
-                        <div class="form-group row">
-                            <div class="col-form-button">
+                        <div class="row align-items-center">
+                            <div class="col-auto">
                                 <button class="btn btn-lg btn-primary" type="submit">Check</button>
                             </div>
-                            <div class="col-form-button">
+                            <div class="col-auto">
                                 <button id="passcheckout" class="btn btn-lg btn-primary" type="button">Back</button>
                             </div>
                             
