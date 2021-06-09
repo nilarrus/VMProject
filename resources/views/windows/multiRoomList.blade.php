@@ -29,13 +29,18 @@
                         <input type="text" name="nsala" id="nsala" value="" style="display: none">
                         <input type="text" name="creador" id="creador" value="" style="display: none">
                         <div class="form-group row">
-                            <label for="pass" class="col-fom-label">Contraseña: </label>
+                            <label for="pass" class="col-form-label">Contraseña: </label>
                             <input type="password" name="pass" id="pass" value="" required  autofocus>
                         </div>
                         <input type="text" name="level" id="level" style="display: none" value="1">
                         <div class="form-group row">
-                            <button class="btn btn-lg btn-primary" type="submit">Check</button>
-                            <button id="passcheckout" class="btn btn-lg btn-primary" type="button">Back</button>
+                            <div class="col-form-button">
+                                <button class="btn btn-lg btn-primary" type="submit">Check</button>
+                            </div>
+                            <div class="col-form-button">
+                                <button id="passcheckout" class="btn btn-lg btn-primary" type="button">Back</button>
+                            </div>
+                            
                         </div>
                     </form>
                 </div>
@@ -95,6 +100,7 @@
 <script>    
     inGameList();
     // display form hidden jquery
+    $("#FormPass").css("display", "none");
     $("#passcheckout").on("click", function () {
         $("#FormPass").css("display", "none");
     });
