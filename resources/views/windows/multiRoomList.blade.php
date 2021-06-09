@@ -28,8 +28,8 @@
                             </tbody>
                          </table>
                         -->
-                         <div class="row alig-items-center">
-                             <div class="row">
+                         <div class="row ">
+                             <div class="row alig-items-center">
                                 <div class="col-auto">
                                     <div>Numero de sala</div>
                                 </div>
@@ -37,7 +37,7 @@
                                     <div id="lnsala"></div>
                                 </div>
                              </div>
-                             <div class="row">
+                             <div class="row alig-items-center">
                                 <div class="col-auto">
                                     <div>Creador</div>
                                 </div>
