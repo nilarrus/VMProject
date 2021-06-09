@@ -35,6 +35,7 @@
                         <input type="text" name="level" id="level" style="display: none" value="1">
                         <div class="form-group row">
                             <button class="btn btn-lg btn-primary" type="submit">Check</button>
+                            <button id="passcheckout" class="btn btn-lg btn-primary" type="button">Back</button>
                         </div>
                     </form>
                 </div>
@@ -94,7 +95,9 @@
 <script>    
     inGameList();
     // display form hidden jquery
-    $("#FormPass").css("display", "none");
+    $("#passcheckout").on("click", function () {
+        $("#FormPass").css("display", "none");
+    });
     
 </script>
 @endsection
