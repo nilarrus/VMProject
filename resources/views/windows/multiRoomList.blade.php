@@ -14,7 +14,7 @@
                 <div id="FPContent">
                     <form class="checkPass" id="checkPass" action="{{ route('multiRoomPass')}}" method="post">
                         @csrf
-                        <table class="table table-hover table-dark">
+                        <table class="table table-dark">
                             <thead>
                                 <th scope="col">Numero de sala</th>
                                 <th scope="col">Creador</th>
@@ -29,7 +29,7 @@
                         <input type="text" name="nsala" id="nsala" value="" style="display: none">
                         <input type="text" name="creador" id="creador" value="" style="display: none">
                         <div class="form-group row">
-                            <label for="pass" class="col-fom-label">Contraseña</label>
+                            <label for="pass" class="col-fom-label">Contraseña: </label>
                             <input type="password" name="pass" id="pass" value="" required  autofocus>
                         </div>
                         <input type="text" name="level" id="level" style="display: none" value="1">
@@ -58,7 +58,7 @@
                                 <div class="header text-center">
      
                                 </div>
-                                <table class="table table-striped table-dark">
+                                <table class="table table-hover table-dark">
                                     <thead>
                                     <tr>
                                        <th scope="col">Numero de sala</th>
