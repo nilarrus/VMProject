@@ -2,8 +2,9 @@
 
 @section('content')
 <!-- JQuery -->
-<script src="{{ URL::asset('js/Multiplayer.js')}}"></script>
 <script src="{{ URL::asset('js/ajaxCalls.js')}}"></script>
+<script src="{{ URL::asset('js/Multiplayer.js')}}"></script>
+
 
 <div class="container">
 

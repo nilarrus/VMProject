@@ -1,3 +1,5 @@
+var CelesCorrectes;
+
 function celesServer(nSala) {
     console.log("call");
     $.ajax({
@@ -8,8 +10,10 @@ function celesServer(nSala) {
             "nsala" : nSala
         },
         success: function (backd) {
-            console.log(backd.msg);
+            
             $("#backAjax").html(backd.msg.Celes);
+            CelesCorrectes = backd.msg.Celes;
+            console.log(CelesCorrectes);
         }
     });
 }
