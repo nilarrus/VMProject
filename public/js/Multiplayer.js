@@ -10,16 +10,13 @@ function getCelesCorrectes(acc) {
     for (let c = 0; c < acc.length; c++) {
         var x = acc[c];
         CelesHtmlElemets[c] = list[x];
-       
- 
     }
-    console.log(CelesHtmlElemets);
 }
 
 function pCelesCorrectes(cc) {
    
     var list = getCelesCorrectes(cc);
-    /*
+    
     for (let c = 0; c < list.length; c++) {
         setTimeout(() => {
             list[c].style.backgroundColor = "green"
@@ -27,7 +24,7 @@ function pCelesCorrectes(cc) {
         list[c].style.backgroundColor = "wheat"
     }
     //habilitar el mouse
-
+    /*
     //tiempo
     playTime();
     */
