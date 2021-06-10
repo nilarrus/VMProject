@@ -2,7 +2,7 @@ var CelCorrectes;
 var CelesHtmlElemets;
 var idInter;
 var CelUser;
-var fGame;
+var fGame = 0;
 
 function finDelJuego() {
     alert("Fin del juego");
@@ -14,23 +14,27 @@ function finDelJuego() {
 
 function detectarCelda(nC) {
     var list = $(".celda");
-    if(CelCorrectes.includes(nC)){
-        list[nC].style.backgroundColor="green";
-        DeshabilitarMouseClick(nC);
-        fGame = fGame+1;
+    if(nC>=0){    
+        if(CelCorrectes.includes(nC)){
+            list[nC].style.backgroundColor="green";
+            DeshabilitarMouseClick(nC);
+            fGame = fGame+1;
 
-        if(CelCorrectes.length == fGame){
-            finDelJuego();
+            if(CelCorrectes.length == fGame){
+                finDelJuego();
+            }
+            console.log("celda posicion : "+nC);
+        }else{
+            setTimeout(() => {
+                list[nC].style.backgroundColor = "wheat";
+            }, 1000);
+            list[nC].style.backgroundColor = "red";
+
+            var fail = parseInt($("#gameFails").text());
+            $("#gameFails").text(fail);
         }
-        console.log("celda posicion :"+nC);
     }else{
-        setTimeout(() => {
-            list[nC].style.backgroundColor = "wheat";
-        }, 1000);
-        list[nC].style.backgroundColor = "red";
-
-        var fail = parseInt($("#gameFails").text());
-        $("#gameFails").text(fail);
+        alert("deshabilitado");
     }
 }
 
