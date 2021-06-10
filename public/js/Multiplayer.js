@@ -14,6 +14,7 @@ function getCelesCorrectes(acc) {
     return CelesHtmlElemets;
 }
 
+
 function pCelesCorrectes(cc) {
    
     var list = getCelesCorrectes(cc);
@@ -21,7 +22,7 @@ function pCelesCorrectes(cc) {
     for (let c = 0; c < list.length; c++) {
         setTimeout(() => {
             list[c].style.backgroundColor = "wheat"
-        }, 1000);
+        }, 3000);
         list[c].style.backgroundColor = "green"
     }
     //habilitar el mouse
