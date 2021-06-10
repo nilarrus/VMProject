@@ -20,9 +20,9 @@ function pCelesCorrectes(cc) {
     
     for (let c = 0; c < list.length; c++) {
         setTimeout(() => {
-            list[c].style.backgroundColor = "green"
+            list[c].style.backgroundColor = "wheat"
         }, 1000);
-        list[c].style.backgroundColor = "wheat"
+        list[c].style.backgroundColor = "green"
     }
     //habilitar el mouse
     /*
