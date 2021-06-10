@@ -134,7 +134,7 @@ function playCelesCorrectes(Ccorrectes) {
  */
 function relog() {
     //console.log(document.getElementById("time").textContent);
-    var reg = document.getElementById("gameTime").textContent
+    var reg = document.getElementById("gameTime").textContent;
     var time =parseInt(reg)+1;
     document.getElementById("gameTime").innerHTML = time;
 }

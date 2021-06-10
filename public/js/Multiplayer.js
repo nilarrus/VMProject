@@ -1,7 +1,29 @@
 var CelCorrectes;
+var idInter;
+
+function stopInterval() {
+        clearInterval(idInter);
+        
+}
+
+function relog() {
+    var reg = $("#gameTime").html;
+    var time = parseInt(reg)+1;
+    $("#gameTime").html(time);
+}
 
 
-//Genera la taula 
+//Set interval
+
+function playTime() {
+    idInter = setInterval(relog,1000);
+}
+
+/**
+ * Genera la taula 
+ * @param {Integer} rows 
+ * @param {Integer} cols 
+ */
 function generarTauler(rows,cols) {
     // tbody
     var tbody = $('<tbody>');
@@ -21,6 +43,11 @@ function generarTauler(rows,cols) {
     $('#table').append(tbody);
 }
 //Llençar la creacio de la taula recollint les celes per ajax ajaxCalls.js
+/**
+ * 
+ * @param {Array} JsonCeles 
+ * @param {Integer} level 
+ */
 function SGame(JsonCeles,level) {
     CelCorrectes = JsonCeles;
     rc = level+2;
