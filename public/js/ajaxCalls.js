@@ -1,4 +1,4 @@
-var CelesCorrectes;
+var CelesCorrectes = [];
 
 function celesServer(nSala) {
     console.log("call");
@@ -13,7 +13,11 @@ function celesServer(nSala) {
             
             $("#backAjax").html(backd.msg.Celes);
             CelesCorrectes = JSON.parse(backd.msg.Celes);
-            console.log(CelesCorrectes);
+            for (let i = 0; i < CelesCorrectes.length; i++) {
+                console.log("For: " ,CelesCorrectes[i]);
+                
+            }
+            console.log(CelesCorrectes.sort());
             SGame(backd.msg.Celes,parseInt($("#nivel").text()));
         }
     });
