@@ -6,7 +6,7 @@ function stopInterval() {
 
 }
 
-function relog() {
+function rellotge() {
     var reg = $("#gameTime").text();
     var time = parseInt(reg)+1;
     $("#gameTime").text(time);
@@ -16,7 +16,7 @@ function relog() {
 //Set interval
 
 function playTime() {
-    idInter = setInterval(relog,1000);
+    idInter = setInterval(rellotge,1000);
 }
 
 /**
