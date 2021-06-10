@@ -10,6 +10,7 @@ function finDelJuego() {
     for (let x = 0; x < list.length; x++) {
         DeshabilitarMouseClick(x);
     }
+    clearInterval(idInter);
 }
 
 function detectarCelda(nC) {
@@ -23,18 +24,17 @@ function detectarCelda(nC) {
             if(CelCorrectes.length == fGame){
                 finDelJuego();
             }
-            console.log("celda posicion : "+nC);
+            
         }else{
             setTimeout(() => {
                 list[nC].style.backgroundColor = "wheat";
             }, 1000);
             list[nC].style.backgroundColor = "red";
-
-            var fail = parseInt($("#gameFails").text());
-            $("#gameFails").text(fail);
+            
+            var fail = parseInt($("#gameFails").text()+1);
+            $("#gameFails").text(fail.toString);
+            
         }
-    }else{
-        alert("deshabilitado");
     }
 }
 
@@ -81,10 +81,9 @@ function pCelesCorrectes(cc) {
     }
     //habilitar el mouse
     HabilitarMouseClick();
-    /*
     //tiempo
     playTime();
-    */
+    
 }
 
 
@@ -137,6 +136,5 @@ function SGame(JsonCeles,level) {
     CelCorrectes = JsonCeles;
     rc = level+2;
     generarTauler(rc,rc);
-    console.log("Dins la funcio: ",CelCorrectes, " ",level);
     pCelesCorrectes(CelCorrectes);
 }
