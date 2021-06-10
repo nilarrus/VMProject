@@ -1,4 +1,7 @@
-var CelCorrectes = CelesCorrectes;
+var CelCorrectes;
+
+
+//Genera la taula 
 function generarTauler(rows,cols) {
     // tbody
     var tbody = $('<tbody>');
@@ -17,10 +20,10 @@ function generarTauler(rows,cols) {
     //Añadimos el tbody a la tabla
     $('#table').append(tbody);
 }
-
+//Llençar la creacio de la taula recollint les celes per ajax ajaxCalls.js
 function SGame(JsonCeles,level) {
-
+    CelCorrectes = JsonCeles;
     rc = level+2;
     generarTauler(rc,rc);
-    console.log("Dins la funcio: ",JsonCeles, " ",level);
+    console.log("Dins la funcio: ",CelCorrectes, " ",level);
 }
