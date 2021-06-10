@@ -76,13 +76,14 @@ function pCelesCorrectes(cc) {
     for (let c = 0; c < list.length; c++) {
         setTimeout(() => {
             list[c].style.backgroundColor = "wheat"
+            //habilitar el mouse
+            HabilitarMouseClick();
+            //tiempo
+            playTime();
         }, 3000);
         list[c].style.backgroundColor = "green"
     }
-    //habilitar el mouse
-    HabilitarMouseClick();
-    //tiempo
-    playTime();
+    
     
 }
 
