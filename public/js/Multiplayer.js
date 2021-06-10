@@ -3,13 +3,13 @@ var idInter;
 
 function stopInterval() {
         clearInterval(idInter);
-        
+
 }
 
 function relog() {
-    var reg = $("#gameTime").html;
+    var reg = $("#gameTime").text();
     var time = parseInt(reg)+1;
-    $("#gameTime").html(time);
+    $("#gameTime").text(time);
 }
 
 
