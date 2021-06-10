@@ -1,6 +1,56 @@
 var CelCorrectes;
 var CelesHtmlElemets;
 var idInter;
+var CelUser;
+var fGame;
+
+function finDelJuego() {
+    alert("Fin del juego");
+    var list =$(".celda");
+    for (let x = 0; x < list.length; x++) {
+        DeshabilitarMouseClick(x);
+    }
+}
+
+function detectarCelda(nC) {
+    var list = $(".celda");
+    if(CelCorrectes.includes(nC)){
+        list[nC].style.backgroundColor="green";
+        DeshabilitarMouseClick(nC);
+        fGame = fGame+1;
+
+        if(CelCorrectes.length == fGame){
+            finDelJuego();
+        }
+        console.log("celda posicion :"+nC);
+    }else{
+        setTimeout(() => {
+            list[nC].style.backgroundColor = "wheat";
+        }, 1000);
+        list[nC].style.backgroundColor = "red";
+
+        var fail = parseInt($("#gameFails").text());
+        $("#gameFails").text(fail);
+    }
+}
+
+
+//Hablita el click para saber que celda al pulsado
+function HabilitarMouseClick() {
+    var lista = $("td.celda");
+    CelUser = Array();
+    for (let ind = 0; ind < lista.length; ind++) {
+        lista[ind].setAttribute("onclick","detectarCelda("+ind+")");        
+    }
+}
+
+//Deshablitar el click de la celda
+function DeshabilitarMouseClick(celIndx) {
+    var lista = $("td.celda");
+    lista[celIndx].setAttribute("onclick","detectarCelda(-"+1+")");        
+    
+}
+
 
 // Close interval clearInterval(idInter);
 
@@ -26,6 +76,7 @@ function pCelesCorrectes(cc) {
         list[c].style.backgroundColor = "green"
     }
     //habilitar el mouse
+    HabilitarMouseClick();
     /*
     //tiempo
     playTime();
