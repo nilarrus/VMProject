@@ -30,7 +30,7 @@
                         -->
                         <div class="row ">
                             <div class="col-auto">
-                                <div>Numero de sala</div>
+                                <div>Sala</div>
                             </div>
                             <div class="col-auto">
                                 <div id="lnsala"></div>
