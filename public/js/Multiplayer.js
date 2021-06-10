@@ -10,10 +10,9 @@ function getCelesCorrectes(acc) {
     for (let c = 0; c < acc.length; c++) {
         var x = acc[c];
         CelesHtmlElemets.push(list[x]);
-        console.log(CelesHtmlElemets[c]);
-        
+ 
     }
-    //console.log(CelesHtmlElemets);
+    console.log(CelesHtmlElemets);
 }
 
 function pCelesCorrectes(cc) {
