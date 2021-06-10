@@ -5,12 +5,14 @@ var CelUser;
 var fGame = 0;
 
 function finDelJuego() {
+    clearInterval(idInter);
     alert("Fin del juego");
+    $("#table").css("border","7px solid black");
     var list =$(".celda");
     for (let x = 0; x < list.length; x++) {
         DeshabilitarMouseClick(x);
     }
-    clearInterval(idInter);
+    
 }
 
 function detectarCelda(nC) {
@@ -78,11 +80,13 @@ function pCelesCorrectes(cc) {
             list[c].style.backgroundColor = "wheat"
             //habilitar el mouse
             HabilitarMouseClick();
-            //tiempo
-            playTime();
+            $("#table").css("border","7px solid green");
         }, 3000);
         list[c].style.backgroundColor = "green"
     }
+    setTimeout(() => {
+        playTime();
+    }, 3000);
     
     
 }
