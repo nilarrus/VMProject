@@ -44,7 +44,7 @@
             
         </table>
     </div>
-    <div id="backAjax"></div>
+    <div id="backAjax" style="display: none"></div>
     <button id="start" class="btn btn-primary" type="button" onclick="celesServer('{{$_POST['nsala']}}')" > Call ajax </button>
     
     @if (Auth::user()->username == $creador)
