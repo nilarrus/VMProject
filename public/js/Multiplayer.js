@@ -6,7 +6,7 @@ var fGame = 0;
 
 function finDelJuego() {
     clearInterval(idInter);
-    alert("Fin del juego");
+    //alert("Fin del juego");
     $("#table").css("border","7px solid black");
     var list =$(".celda");
     for (let x = 0; x < list.length; x++) {
