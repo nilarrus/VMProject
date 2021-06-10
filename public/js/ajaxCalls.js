@@ -12,9 +12,9 @@ function celesServer(nSala) {
         success: function (backd) {
             
             $("#backAjax").html(backd.msg.Celes);
-            CelesCorrectes = backd.msg.Celes;
-            //console.log(CelesCorrectes);
-            SGame(CelesCorrectes,parseInt($("#nivel").text()));
+            CelesCorrectes = JSON.parse(backd.msg.Celes);
+            console.log(CelesCorrectes);
+            SGame(backd.msg.Celes,parseInt($("#nivel").text()));
         }
     });
 }
