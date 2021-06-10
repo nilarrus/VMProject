@@ -11,6 +11,7 @@ function getCelesCorrectes(acc) {
         var x = acc[c];
         CelesHtmlElemets[c] = list[x];
     }
+    return CelesHtmlElemets;
 }
 
 function pCelesCorrectes(cc) {
