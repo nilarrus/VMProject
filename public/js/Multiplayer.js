@@ -5,6 +5,7 @@ var idInter;
 // Close interval clearInterval(idInter);
 
 function getCelesCorrectes(acc) {
+    CelesHtmlElemets = new Array(acc.length);
     var list = document.getElementsByClassName("celda");
     for (let c = 0; c < acc.length; c++) {
         CelesHtmlElemets.push(list[acc[c]]);
