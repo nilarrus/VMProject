@@ -31,7 +31,7 @@ function detectarCelda(nC) {
             }, 1000);
             list[nC].style.backgroundColor = "red";
             
-            var fail = parseInt($("#gameFails").text()+1);
+            var fail = parseInt($("#gameFails").text())+1;
             $("#gameFails").text(fail.toString());
             
         }
