@@ -8,7 +8,7 @@
 
 
 <div class="container">
-
+    <button id="start" class="btn btn-primary" type="button" onclick="celesServer('{{$_POST['nsala']}}')" > Empezar </button>
     <div id="header" class="mb-4">
         <div id="level" class="row mb-0 mt-0">           
             <div class="col text-right">Nivel</div>
@@ -45,7 +45,7 @@
         </table>
     </div>
     <div id="backAjax" style="display: none"></div>
-    <button id="start" class="btn btn-primary" type="button" onclick="celesServer('{{$_POST['nsala']}}')" > Call ajax </button>
+    
     
     @if (Auth::user()->username == $creador)
         <form action="{{ route('deleteRoom')}}" method="post" id="formReturn" >
