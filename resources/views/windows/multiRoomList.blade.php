@@ -9,10 +9,10 @@
 <div class="container">
 
     <div class="row justify-content-center text-center">
-        <div id="FormPass" class="FormPass">
+        <div id="FormPass" class="FormPass" style="display: none">
             <div id="FPBack">         
                 <div id="FPContent">
-                    <form class="checkPass " id="checkPass" action="{{ route('multiRoomPass')}}" method="post" style="display: none">
+                    <form class="checkPass " id="checkPass" action="{{ route('multiRoomPass')}}" method="post" >
                         @csrf
                         <div class="row ">
                             <div class="col-auto">
