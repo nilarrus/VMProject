@@ -8,11 +8,13 @@ function getCelesCorrectes(acc) {
     CelesHtmlElemets = new Array(acc.length);
     var list = document.getElementsByClassName("celda");
     for (let c = 0; c < acc.length; c++) {
-        CelesHtmlElemets.push(list[acc[c]]);
-        console.log(CelesHtmlElemets[c]);
+        console.log("List amb c: ",list[c]);
+        console.log("acc amb c:", acc[c]);
+        //CelesHtmlElemets.push(list[acc[c]]);
+        //console.log(CelesHtmlElemets[c]);
         
     }
-    console.log(CelesHtmlElemets);
+    //console.log(CelesHtmlElemets);
 }
 
 function pCelesCorrectes(cc) {
