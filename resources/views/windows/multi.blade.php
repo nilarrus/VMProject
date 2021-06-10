@@ -46,8 +46,7 @@
     </div>
     <div id="backAjax"></div>
     <button id="start" class="btn btn-primary" type="button" onclick="celesServer('{{$_POST['nsala']}}')" > Call ajax </button>
-    <button id="start" class="btn btn-primary" type="button" onclick="playTime()" > timer </button>
-    <button id="start" class="btn btn-primary" type="button" onclick="stopInterval()" > stop </button>
+    
     @if (Auth::user()->username == $creador)
         <form action="{{ route('deleteRoom')}}" method="post" id="formReturn" >
             @csrf

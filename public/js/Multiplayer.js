@@ -1,11 +1,28 @@
 var CelCorrectes;
 var idInter;
 
-function stopInterval() {
-        clearInterval(idInter);
+// Close interval clearInterval(idInter);
+
+
+function pCelesCorrectes(cc) {
+    var list = cc;
+    for (let c = 0; c < list.length; c++) {
+        setTimeout(() => {
+            list[c].style.backgroundColor = "green"
+        }, 1000);
+        list[c].style.backgroundColor = "wheat"
+    }
+    //habilitar el mouse
+    
+    //tiempo
+    playTime();
 
 }
 
+
+
+
+// Rellotges del joc 
 function rellotge() {
     var reg = $("#gameTime").text();
     var time = parseInt(reg)+1;
@@ -17,7 +34,6 @@ function rellotge() {
 
 function playTime() {
     idInter = setInterval(rellotge,1000);
-    
 }
 
 /**
@@ -54,4 +70,5 @@ function SGame(JsonCeles,level) {
     rc = level+2;
     generarTauler(rc,rc);
     console.log("Dins la funcio: ",CelCorrectes, " ",level);
+    pCelesCorrectes(CelCorrectes);
 }
