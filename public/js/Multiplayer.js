@@ -138,8 +138,10 @@ function generarTauler(rows,cols) {
  * @param {Integer} level 
  */
 function SGame(JsonCeles,level) {
+    $("#start").hide();
     CelCorrectes = JsonCeles;
     rc = level+2;
     generarTauler(rc,rc);
     pCelesCorrectes(CelCorrectes);
+
 }
