@@ -18,7 +18,8 @@ function generarTauler(rows,cols) {
 }
 
 function SGame(JsonCeles,level) {
+
     rc = level+2;
-    generarTauler(rc,rc);
-    console.log("Dins la funcio: ",JsonCeles);
+    //generarTauler(rc,rc);
+    console.log("Dins la funcio: ",JsonCeles, " ",level);
 }

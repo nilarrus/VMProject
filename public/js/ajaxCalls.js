@@ -13,7 +13,8 @@ function celesServer(nSala) {
             
             $("#backAjax").html(backd.msg.Celes);
             CelesCorrectes = backd.msg.Celes;
-            console.log(CelesCorrectes);
+            //console.log(CelesCorrectes);
+            SGame(CelesCorrectes,parseInt($("#nivel").text()));
         }
     });
 }

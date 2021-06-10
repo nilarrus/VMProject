@@ -12,22 +12,8 @@
         <div id="FormPass" class="FormPass">
             <div id="FPBack">         
                 <div id="FPContent">
-                    <form class="checkPass " id="checkPass" action="{{ route('multiRoomPass')}}" method="post">
+                    <form class="checkPass " id="checkPass" action="{{ route('multiRoomPass')}}" method="post" style="display: none">
                         @csrf
-                        <!--
-                            <table class="table table-dark">
-                            <thead>
-                                <th scope="col">Numero de sala</th>
-                                <th scope="col">Creador</th>
-                            </thead>
-                            <tbody>                    
-                               <tr id="rowList">
-                                    <td id="lnsala"></td>
-                                    <td id="lcreador"></td>
-                               </tr>
-                            </tbody>
-                         </table>
-                        -->
                         <div class="row ">
                             <div class="col-auto">
                                 <div>Sala</div>
@@ -118,7 +104,7 @@
 <script>    
     inGameList();
     // display form hidden jquery
-    $("#FormPass").css("display", "none");
+    
     $("#passcheckout").on("click", function () {
         $("#FormPass").css("display", "none");
     });
