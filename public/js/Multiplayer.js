@@ -17,6 +17,7 @@ function rellotge() {
 
 function playTime() {
     idInter = setInterval(rellotge,1000);
+    
 }
 
 /**
